@@ -1,0 +1,63 @@
+D:\OneDrive\peseklu\OneDrive - SPŠEaG v Úžlabině\UPG\UPG\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\bin\Debug\Dlouhodobka Sorting Algoritms.exe.config
+D:\OneDrive\peseklu\OneDrive - SPŠEaG v Úžlabině\UPG\UPG\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\bin\Debug\Dlouhodobka Sorting Algoritms.exe
+D:\OneDrive\peseklu\OneDrive - SPŠEaG v Úžlabině\UPG\UPG\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\bin\Debug\Dlouhodobka Sorting Algoritms.pdb
+D:\OneDrive\peseklu\OneDrive - SPŠEaG v Úžlabině\UPG\UPG\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka Sorting Algoritms.csproj.AssemblyReference.cache
+D:\OneDrive\peseklu\OneDrive - SPŠEaG v Úžlabině\UPG\UPG\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka Sorting Algoritms.csproj.SuggestedBindingRedirects.cache
+D:\OneDrive\peseklu\OneDrive - SPŠEaG v Úžlabině\UPG\UPG\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka_Sorting_Algoritms.Main.resources
+D:\OneDrive\peseklu\OneDrive - SPŠEaG v Úžlabině\UPG\UPG\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka_Sorting_Algoritms.Properties.Resources.resources
+D:\OneDrive\peseklu\OneDrive - SPŠEaG v Úžlabině\UPG\UPG\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka_Sorting_Algoritms.Vizualizace.resources
+D:\OneDrive\peseklu\OneDrive - SPŠEaG v Úžlabině\UPG\UPG\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka Sorting Algoritms.csproj.GenerateResource.cache
+D:\OneDrive\peseklu\OneDrive - SPŠEaG v Úžlabině\UPG\UPG\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka Sorting Algoritms.csproj.CoreCompileInputs.cache
+D:\OneDrive\peseklu\OneDrive - SPŠEaG v Úžlabině\UPG\UPG\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka Sorting Algoritms.exe
+D:\OneDrive\peseklu\OneDrive - SPŠEaG v Úžlabině\UPG\UPG\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka Sorting Algoritms.pdb
+D:\OneDrive\peseklu\OneDrive - SPŠEaG v Úžlabině\UPG\UPG\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka_Sorting_Algoritms.ListAlg.resources
+C:\Users\RYZEN\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\bin\Debug\Dlouhodobka Sorting Algoritms.exe.config
+C:\Users\RYZEN\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\bin\Debug\Dlouhodobka Sorting Algoritms.exe
+C:\Users\RYZEN\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\bin\Debug\Dlouhodobka Sorting Algoritms.pdb
+C:\Users\RYZEN\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka Sorting Algoritms.csproj.AssemblyReference.cache
+C:\Users\RYZEN\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka_Sorting_Algoritms.Main.resources
+C:\Users\RYZEN\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka_Sorting_Algoritms.ListAlg.resources
+C:\Users\RYZEN\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka_Sorting_Algoritms.Properties.Resources.resources
+C:\Users\RYZEN\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka_Sorting_Algoritms.Vizualizace.resources
+C:\Users\RYZEN\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka Sorting Algoritms.csproj.GenerateResource.cache
+C:\Users\RYZEN\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka Sorting Algoritms.csproj.CoreCompileInputs.cache
+C:\Users\RYZEN\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka Sorting Algoritms.exe
+C:\Users\RYZEN\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka Sorting Algoritms.pdb
+C:\Users\pesek\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\bin\Debug\Dlouhodobka Sorting Algoritms.exe.config
+C:\Users\pesek\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\bin\Debug\Dlouhodobka Sorting Algoritms.exe
+C:\Users\pesek\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\bin\Debug\Dlouhodobka Sorting Algoritms.pdb
+C:\Users\pesek\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka Sorting Algoritms.csproj.AssemblyReference.cache
+C:\Users\pesek\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka_Sorting_Algoritms.Main.resources
+C:\Users\pesek\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka_Sorting_Algoritms.ListAlg.resources
+C:\Users\pesek\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka_Sorting_Algoritms.Properties.Resources.resources
+C:\Users\pesek\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka_Sorting_Algoritms.Vizualizace.resources
+C:\Users\pesek\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka Sorting Algoritms.csproj.GenerateResource.cache
+C:\Users\pesek\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka Sorting Algoritms.csproj.CoreCompileInputs.cache
+C:\Users\pesek\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka Sorting Algoritms.exe
+C:\Users\pesek\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka Sorting Algoritms.pdb
+C:\Users\peseklu\Desktop\Nová složka\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\bin\Debug\Dlouhodobka Sorting Algoritms.exe.config
+C:\Users\peseklu\Desktop\Nová složka\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\bin\Debug\Dlouhodobka Sorting Algoritms.exe
+C:\Users\peseklu\Desktop\Nová složka\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\bin\Debug\Dlouhodobka Sorting Algoritms.pdb
+C:\Users\peseklu\Desktop\Nová složka\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka Sorting Algoritms.csproj.AssemblyReference.cache
+C:\Users\peseklu\Desktop\Nová složka\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka Sorting Algoritms.csproj.SuggestedBindingRedirects.cache
+C:\Users\peseklu\Desktop\Nová složka\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka_Sorting_Algoritms.Main.resources
+C:\Users\peseklu\Desktop\Nová složka\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka_Sorting_Algoritms.ListAlg.resources
+C:\Users\peseklu\Desktop\Nová složka\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka_Sorting_Algoritms.Properties.Resources.resources
+C:\Users\peseklu\Desktop\Nová složka\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka_Sorting_Algoritms.Vizualizace.resources
+C:\Users\peseklu\Desktop\Nová složka\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka Sorting Algoritms.csproj.GenerateResource.cache
+C:\Users\peseklu\Desktop\Nová složka\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka Sorting Algoritms.csproj.CoreCompileInputs.cache
+C:\Users\peseklu\Desktop\Nová složka\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka Sorting Algoritms.exe
+C:\Users\peseklu\Desktop\Nová složka\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka Sorting Algoritms.pdb
+C:\Users\LUKAS\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\bin\Debug\Dlouhodobka Sorting Algoritms.exe.config
+C:\Users\LUKAS\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\bin\Debug\Dlouhodobka Sorting Algoritms.exe
+C:\Users\LUKAS\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\bin\Debug\Dlouhodobka Sorting Algoritms.pdb
+C:\Users\LUKAS\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka Sorting Algoritms.csprojAssemblyReference.cache
+C:\Users\LUKAS\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka_Sorting_Algoritms.Main.resources
+C:\Users\LUKAS\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka_Sorting_Algoritms.ListAlg.resources
+C:\Users\LUKAS\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka_Sorting_Algoritms.Properties.Resources.resources
+C:\Users\LUKAS\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka_Sorting_Algoritms.Vizualizace.resources
+C:\Users\LUKAS\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka Sorting Algoritms.csproj.GenerateResource.cache
+C:\Users\LUKAS\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka Sorting Algoritms.csproj.CoreCompileInputs.cache
+C:\Users\LUKAS\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka Sorting Algoritms.exe
+C:\Users\LUKAS\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka Sorting Algoritms.pdb
+C:\Users\RYZEN\Desktop\Dlouhodobka Sorting Algoritms\Dlouhodobka Sorting Algoritms\obj\Debug\Dlouhodobka_Sorting_Algoritms.Porovnání.resources
