@@ -37,9 +37,10 @@
             // 
             // btn_Ready
             // 
-            this.btn_Ready.Location = new System.Drawing.Point(476, 12);
+            this.btn_Ready.Location = new System.Drawing.Point(635, 15);
+            this.btn_Ready.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Ready.Name = "btn_Ready";
-            this.btn_Ready.Size = new System.Drawing.Size(75, 23);
+            this.btn_Ready.Size = new System.Drawing.Size(100, 28);
             this.btn_Ready.TabIndex = 0;
             this.btn_Ready.Text = "Start";
             this.btn_Ready.UseVisualStyleBackColor = true;
@@ -48,49 +49,54 @@
             // lb_porovnani
             // 
             this.lb_porovnani.AutoSize = true;
-            this.lb_porovnani.Location = new System.Drawing.Point(693, 22);
+            this.lb_porovnani.Location = new System.Drawing.Point(924, 27);
+            this.lb_porovnani.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_porovnani.Name = "lb_porovnani";
-            this.lb_porovnani.Size = new System.Drawing.Size(105, 13);
+            this.lb_porovnani.Size = new System.Drawing.Size(167, 16);
             this.lb_porovnani.TabIndex = 1;
-            this.lb_porovnani.Text = "Počet porovnání: 10";
+            this.lb_porovnani.Text = "Number of comparisons ??";
             // 
             // lb_prvky
             // 
             this.lb_prvky.AutoSize = true;
-            this.lb_prvky.Location = new System.Drawing.Point(12, 22);
+            this.lb_prvky.Location = new System.Drawing.Point(16, 27);
+            this.lb_prvky.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_prvky.Name = "lb_prvky";
-            this.lb_prvky.Size = new System.Drawing.Size(89, 13);
+            this.lb_prvky.Size = new System.Drawing.Size(147, 16);
             this.lb_prvky.TabIndex = 2;
-            this.lb_prvky.Text = "Počet prvků: 100";
+            this.lb_prvky.Text = "Number of elements: ??";
             // 
             // lb_zapisu
             // 
             this.lb_zapisu.AutoSize = true;
-            this.lb_zapisu.Location = new System.Drawing.Point(866, 22);
+            this.lb_zapisu.Location = new System.Drawing.Point(1155, 27);
+            this.lb_zapisu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_zapisu.Name = "lb_zapisu";
-            this.lb_zapisu.Size = new System.Drawing.Size(80, 13);
+            this.lb_zapisu.Size = new System.Drawing.Size(132, 16);
             this.lb_zapisu.TabIndex = 3;
-            this.lb_zapisu.Text = "Počet zápisů: 5";
+            this.lb_zapisu.Text = "Number of entries: ??";
             // 
             // lb_cas
             // 
             this.lb_cas.AutoSize = true;
-            this.lb_cas.Location = new System.Drawing.Point(133, 22);
+            this.lb_cas.Location = new System.Drawing.Point(177, 27);
+            this.lb_cas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_cas.Name = "lb_cas";
-            this.lb_cas.Size = new System.Drawing.Size(84, 13);
+            this.lb_cas.Size = new System.Drawing.Size(106, 16);
             this.lb_cas.TabIndex = 4;
-            this.lb_cas.Text = "Uplynulý čas: 1s";
+            this.lb_cas.Text = "Elapsed time: ??";
             // 
             // Vizualizace
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1013, 450);
+            this.ClientSize = new System.Drawing.Size(1351, 554);
             this.Controls.Add(this.lb_cas);
             this.Controls.Add(this.lb_zapisu);
             this.Controls.Add(this.lb_prvky);
             this.Controls.Add(this.lb_porovnani);
             this.Controls.Add(this.btn_Ready);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Vizualizace";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Vizualizace_Load);

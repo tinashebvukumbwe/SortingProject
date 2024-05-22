@@ -13,6 +13,9 @@ namespace Dlouhodobka_Sorting_Algoritms
 {
     public partial class Porovnání : Form
     {
+        #region Var
+        Charts chartsTab;
+
         static Stopwatch stopwatch;
 
         static ProgressBar pbBubble;
@@ -62,7 +65,7 @@ namespace Dlouhodobka_Sorting_Algoritms
 
         static double[] casy = new double[5];
 
-
+        #endregion
 
         public Porovnání()
         {
@@ -114,8 +117,6 @@ namespace Dlouhodobka_Sorting_Algoritms
             lbHeapZapis = lb_HeapZapis;
         }
 
-
-
         private void btn_start_Click(object sender, EventArgs e)
         {
             try
@@ -124,7 +125,7 @@ namespace Dlouhodobka_Sorting_Algoritms
             }
             catch
             {
-                MessageBox.Show("Zadejte číslo ve správném formátu","Kritická chyba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Enter the number in the correct format", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -135,52 +136,48 @@ namespace Dlouhodobka_Sorting_Algoritms
             pbOdd.Maximum = (pocet * 2) - 1;
             pbHeap.Maximum = pocet - 1;
             pbQuick.Maximum = pocet + (pocet / 10);
+
             GenPole();
-
-
-
-                BubbleSortAlgorithm(numbers);
+            BubbleSortAlgorithm(numbers);
             porovnani = 0;
             zapis = 0;
-            GenPole();
 
-                OddEvenSortAlgorithm(numbers);
+            GenPole();
+            OddEvenSortAlgorithm(numbers);
             porovnani = 0;
             zapis = 0;
-            GenPole();
 
+            GenPole();
             stopwatch = new Stopwatch();
             stopwatch.Start();
-                Quick_Sort(numbers, 0, pocet - 1);
+            Quick_Sort(numbers, 0, pocet - 1);
             stopwatch.Stop();
             if(!cbQuick.Checked)
             {
                 cas = stopwatch.Elapsed.TotalMilliseconds;
                 casy[2] = cas;
                 pbQuick.Value = pbQuick.Maximum;
-                lbQuickCas.Text = "Čas: " + cas + " ms";
-                lbQuickPorovnani.Text = "Počet porovnání: " + porovnani;
-                lbQuickZapis.Text = "Počet zápisů: " + zapis;
+                lbQuickCas.Text = $"Time: {cas} ms";
+                lbQuickPorovnani.Text = $"Number of comparisons: {porovnani}";
+                lbQuickZapis.Text = $"Number of entries: {zapis}";
             }
             porovnani = 0;
             zapis = 0;
-            GenPole();
 
-                BogoSort(numbers);
+            GenPole();
+            BogoSort(numbers);
             porovnani = 0;
             zapis = 0;
+
             GenPole();
-
-                HeapSort(numbers);
-
+            HeapSort(numbers);
 
 
-
-            lbBubblePoradi.Text = "Pořadí: " + NajdiPoradi(casy, 0);
-            lbOddPoradi.Text = "Pořadí: " + NajdiPoradi(casy, 1);
-            lbQuickPoradi.Text = "Pořadí: " + NajdiPoradi(casy, 2);
-            lbBogoPoradi.Text = "Pořadí: " + NajdiPoradi(casy, 3);
-            lbHeapPoradi.Text = "Pořadí: " + NajdiPoradi(casy, 4);
+            lbBubblePoradi.Text = "Order: " + NajdiPoradi(casy, 0);
+            lbOddPoradi.Text = "Order: " + NajdiPoradi(casy, 1);
+            lbQuickPoradi.Text = "Order: " + NajdiPoradi(casy, 2);
+            lbBogoPoradi.Text = "Order: " + NajdiPoradi(casy, 3);
+            lbHeapPoradi.Text = "Order: " + NajdiPoradi(casy, 4);
         }
 
         public void GenPole()
@@ -212,12 +209,12 @@ namespace Dlouhodobka_Sorting_Algoritms
             double[] neNuloveHodnoty = indexy.Select(i => pole[i]).ToArray();
             Array.Sort(neNuloveHodnoty, indexy);
 
-            // Vyhledání pořadí na základě indexu
+            // Vyhledání Order na základě indexu
             for (int i = 0; i < neNuloveHodnoty.Length; i++)
             {
                 if (indexy[i] == index)
                 {
-                    return i + 1; // Pořadí začíná od 1
+                    return i + 1; // Order začíná od 1
                 }
             }
 
@@ -251,9 +248,9 @@ namespace Dlouhodobka_Sorting_Algoritms
             cas = stopwatch.Elapsed.TotalMilliseconds;
             casy[0] = cas;
 
-            lbBubbleCas.Text = "Čas: " + cas + " ms";
-            lbBubblePorovnani.Text = "Počet porovnání: " + porovnani;
-            lbBubbleZapis.Text = "Počet zápisů: " + zapis;
+            lbBubbleCas.Text = $"Time: {cas} ms";
+            lbBubblePorovnani.Text = $"Number of comparisons: {porovnani}";
+            lbBubbleZapis.Text = $"Number of entries: {zapis}";
         }
 
         static void Swap(int[] arr, int i, int j)
@@ -313,11 +310,10 @@ namespace Dlouhodobka_Sorting_Algoritms
             cas = stopwatch.Elapsed.TotalMilliseconds;
             casy[1] = cas;
 
-            lbOddCas.Text = "Čas: " + cas + " ms";
-            lbOddPorovnani.Text = "Počet porovnání: " + porovnani;
-            lbOddZapis.Text = "Počet zápisů: " + zapis;
+            lbOddCas.Text = $"Time: {cas} ms";
+            lbOddPorovnani.Text = $"Number of comparisons: {porovnani}";
+            lbOddZapis.Text = $"Number of entries: {zapis}";
         }
-
 
         private static void Quick_Sort(int[] arr, int left, int right)
         {
@@ -380,7 +376,6 @@ namespace Dlouhodobka_Sorting_Algoritms
             }
         }
 
-
         static void BogoSort(int[] arr)
         {
             if (cbBogo.Checked)
@@ -412,9 +407,9 @@ namespace Dlouhodobka_Sorting_Algoritms
             cas = stopwatch.Elapsed.TotalMilliseconds;
             casy[3] = cas;
 
-            lbBogoCas.Text = "Čas: " + cas + " ms";
-            lbBogoPorovnani.Text = "Počet porovnání: " + porovnani;
-            lbBogoZapis.Text = "Počet zápisů: " + zapis;
+            lbBogoCas.Text = $"Time: {cas} ms";
+            lbBogoPorovnani.Text = $"Number of comparisons: {porovnani}";
+            lbBogoZapis.Text = $"Number of entries: {zapis}";
             return true;
         }
 
@@ -461,9 +456,9 @@ namespace Dlouhodobka_Sorting_Algoritms
             cas = stopwatch.Elapsed.TotalMilliseconds;
             casy[4] = cas;
 
-            lbHeapCas.Text = "Čas: " + cas + " ms";
-            lbHeapPorovnani.Text = "Počet porovnání: " + porovnani;
-            lbHeapZapis.Text = "Počet zápisů: " + zapis;
+            lbHeapCas.Text = $"Time: {cas} ms";
+            lbHeapPorovnani.Text = $"Number of comparisons: {porovnani}";
+            lbHeapZapis.Text = $"Number of entries: {zapis}";
         }
 
         void Heapify(int[] array, int n, int i)
@@ -495,12 +490,6 @@ namespace Dlouhodobka_Sorting_Algoritms
 
             porovnani++;
         }
-
-
-
-
-
-
         private void btn_reset_Click(object sender, EventArgs e)
         {
             pbBubble.Value = 0;
@@ -520,30 +509,47 @@ namespace Dlouhodobka_Sorting_Algoritms
             btn_start.BackColor = Color.White;
             btn_start.Enabled = true;
 
-            lbBubbleCas.Text = "Čas: ?? ms";
-            lbBubblePorovnani.Text = "Počet porovnání: ??";
-            lbBubbleZapis.Text = "Počet zápisů: ??";
-            lbBubblePoradi.Text = "Pořadí: ??";
+            lbBubbleCas.Text = "Time: ?? ms";
+            lbBubblePorovnani.Text = "Number of comparisons: ??";
+            lbBubbleZapis.Text = "Number of entries: ??";
+            lbBubblePoradi.Text = "Order: ??";
 
-            lbOddCas.Text = "Čas: ?? ms";
-            lbOddPorovnani.Text = "Počet porovnání: ??";
-            lbOddZapis.Text = "Počet zápisů: ??";
-            lbOddPoradi.Text = "Pořadí: ??";
+            lbOddCas.Text = "Time: ?? ms";
+            lbOddPorovnani.Text = "Number of comparisons: ??";
+            lbOddZapis.Text = "Number of entries: ??";
+            lbOddPoradi.Text = "Order: ??";
 
-            lbQuickCas.Text = "Čas: ?? ms";
-            lbQuickPorovnani.Text = "Počet porovnání: ??";
-            lbQuickZapis.Text = "Počet zápisů: ??";
-            lbQuickPoradi.Text = "Pořadí: ??";
+            lbQuickCas.Text = "Time: ?? ms";
+            lbQuickPorovnani.Text = "Number of comparisons: ??";
+            lbQuickZapis.Text = "Number of entries: ??";
+            lbQuickPoradi.Text = "Order: ??";
 
-            lbBogoCas.Text = "Čas: ?? ms";
-            lbBogoPorovnani.Text = "Počet porovnání: ??";
-            lbBogoZapis.Text = "Počet zápisů: ??";
-            lbBogoPoradi.Text = "Pořadí: ??";
+            lbBogoCas.Text = "Time: ?? ms";
+            lbBogoPorovnani.Text = "Number of comparisons: ??";
+            lbBogoZapis.Text = "Number of entries: ??";
+            lbBogoPoradi.Text = "Order: ??";
 
-            lbHeapCas.Text = "Čas: ?? ms";
-            lbHeapPorovnani.Text = "Počet porovnání: ??";
-            lbHeapZapis.Text = "Počet zápisů: ??";
-            lbHeapPoradi.Text = "Pořadí: ??";
+            lbHeapCas.Text = "Time: ?? ms";
+            lbHeapPorovnani.Text = "Number of comparisons: ??";
+            lbHeapZapis.Text = "Number of entries: ??";
+            lbHeapPoradi.Text = "Order: ??";
         }
+
+        private void chartsBtn_Click(object sender, EventArgs e)
+        {
+            if (chartsTab == null || chartsTab.IsDisposed)
+            {
+                chartsTab = new Charts();
+            }
+
+            chartsTab.Show();
+            chartsTab.Activate();
+        }
+
+        private void label26_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

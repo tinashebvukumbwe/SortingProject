@@ -15,6 +15,7 @@ namespace Dlouhodobka_Sorting_Algoritms
 {
     public partial class Vizualizace : Form
     {
+        #region Var
         static Rectangle[] rectangles;
         static Vizualizace okno;
         int[] numbers;
@@ -29,7 +30,7 @@ namespace Dlouhodobka_Sorting_Algoritms
         static Label lbZapis;
         static Label lbPorovnani;
         static Stopwatch stopwatch;
-
+        #endregion
 
         public Vizualizace(int pPrvku, int dDelay, int alg, bool fast)
         {
@@ -65,7 +66,7 @@ namespace Dlouhodobka_Sorting_Algoritms
                 rectangles[i] = new Rectangle(startX + i * (width), startY - Map(numbers[i], pocet, 360), width, Map(numbers[i], pocet, 360));
             }
 
-            lb_prvky.Text = "Počet prvků: " + pocet;
+            lb_prvky.Text = "Number of elements: " + pocet;
             lbCas = lb_cas;
             lbPorovnani = lb_porovnani;
             lbZapis = lb_zapisu;
@@ -99,17 +100,6 @@ namespace Dlouhodobka_Sorting_Algoritms
             }
         }
 
-
-
-
-
-
-
-
-
-
-
-
         static void BubbleSortAlgorithm(int[] arr, int pocet)
         {
             int n = arr.Length;
@@ -125,19 +115,19 @@ namespace Dlouhodobka_Sorting_Algoritms
 
                     if (!fMode)
                     {
-                        lbPorovnani.Text = "Počet porovnání: " + porovnani;
+                        lbPorovnani.Text = "Number of comparisons: " + porovnani;
 
                         cas = stopwatch.Elapsed.TotalMilliseconds;
-                        lbCas.Text = "Uplynulý čas: " + cas + " ms";
+                        lbCas.Text = "Elapsed time: " + cas + " ms";
                     }
                 }
                 if(fMode)
                 {
                     okno.Refresh();
-                    lbPorovnani.Text = "Počet porovnání: " + porovnani;
+                    lbPorovnani.Text = "Number of comparisons: " + porovnani;
 
                     cas = stopwatch.Elapsed.TotalMilliseconds;
-                    lbCas.Text = "Uplynulý čas: " + cas + " ms";
+                    lbCas.Text = "Elapsed time: " + cas + " ms";
                 }
             }
         }
@@ -166,10 +156,10 @@ namespace Dlouhodobka_Sorting_Algoritms
 
                     if (!fMode)
                     {
-                        lbPorovnani.Text = "Počet porovnání: " + porovnani;
+                        lbPorovnani.Text = "Number of comparisons: " + porovnani;
 
                         cas = stopwatch.Elapsed.TotalMilliseconds;
-                        lbCas.Text = "Uplynulý čas: " + cas + " ms";
+                        lbCas.Text = "Elapsed time: " + cas + " ms";
                     }
                 }
 
@@ -184,19 +174,19 @@ namespace Dlouhodobka_Sorting_Algoritms
 
                     if (!fMode)
                     {
-                        lbPorovnani.Text = "Počet porovnání: " + porovnani;
+                        lbPorovnani.Text = "Number of comparisons: " + porovnani;
 
                         cas = stopwatch.Elapsed.TotalMilliseconds;
-                        lbCas.Text = "Uplynulý čas: " + cas + " ms";
+                        lbCas.Text = "Elapsed time: " + cas + " ms";
                     }
                 }
                 if (fMode)
                 {
                     okno.Refresh();
-                    lbPorovnani.Text = "Počet porovnání: " + porovnani;
+                    lbPorovnani.Text = "Number of comparisons: " + porovnani;
 
                     cas = stopwatch.Elapsed.TotalMilliseconds;
-                    lbCas.Text = "Uplynulý čas: " + cas + " ms";
+                    lbCas.Text = "Elapsed time: " + cas + " ms";
                 }
             }
         }
@@ -272,10 +262,10 @@ namespace Dlouhodobka_Sorting_Algoritms
                     Swap(arr, left, right);
 
                     porovnani++;
-                    lbPorovnani.Text = "Počet porovnání: " + porovnani;
+                    lbPorovnani.Text = "Number of comparisons: " + porovnani;
 
                     cas = stopwatch.Elapsed.TotalMilliseconds;
-                    lbCas.Text = "Uplynulý čas: " + cas + " ms";
+                    lbCas.Text = "Elapsed time: " + cas + " ms";
                 }
                 else
                 {
@@ -284,9 +274,6 @@ namespace Dlouhodobka_Sorting_Algoritms
                 }
             }
         }
-
-
-
 
         static void BogoSort(int[] arr)
         {
@@ -299,10 +286,10 @@ namespace Dlouhodobka_Sorting_Algoritms
                 if (fMode)
                 {
                     okno.Refresh();
-                    lbPorovnani.Text = "Počet porovnání: " + porovnani;
+                    lbPorovnani.Text = "Number of comparisons: " + porovnani;
 
                     cas = stopwatch.Elapsed.TotalMilliseconds;
-                    lbCas.Text = "Uplynulý čas: " + cas + " ms";
+                    lbCas.Text = "Elapsed time: " + cas + " ms";
                 }
             }
         }
@@ -319,10 +306,10 @@ namespace Dlouhodobka_Sorting_Algoritms
                 porovnani++;
                 if (!fMode)
                 {
-                    lbPorovnani.Text = "Počet porovnání: " + porovnani;
+                    lbPorovnani.Text = "Number of comparisons: " + porovnani;
 
                     cas = stopwatch.Elapsed.TotalMilliseconds;
-                    lbCas.Text = "Uplynulý čas: " + cas + " ms";
+                    lbCas.Text = "Elapsed time: " + cas + " ms";
                 }
             }
             return true;
@@ -341,8 +328,6 @@ namespace Dlouhodobka_Sorting_Algoritms
         }
 
 
-
-
         public void Sort(int[] array)
         {
             int n = array.Length;
@@ -353,10 +338,10 @@ namespace Dlouhodobka_Sorting_Algoritms
                 Heapify(array, n, i);
 
                 okno.Refresh();
-                lbPorovnani.Text = "Počet porovnání: " + porovnani;
+                lbPorovnani.Text = "Number of comparisons: " + porovnani;
 
                 cas = stopwatch.Elapsed.TotalMilliseconds;
-                lbCas.Text = "Uplynulý čas: " + cas + " ms";
+                lbCas.Text = "Elapsed time: " + cas + " ms";
             }
 
             // One by one extract an element from heap
@@ -369,10 +354,10 @@ namespace Dlouhodobka_Sorting_Algoritms
                 Heapify(array, i, 0);
 
                 okno.Refresh();
-                lbPorovnani.Text = "Počet porovnání: " + porovnani;
+                lbPorovnani.Text = "Number of comparisons: " + porovnani;
 
                 cas = stopwatch.Elapsed.TotalMilliseconds;
-                lbCas.Text = "Uplynulý čas: " + cas + " ms";
+                lbCas.Text = "Elapsed time: " + cas + " ms";
             }
         }
 
@@ -406,21 +391,6 @@ namespace Dlouhodobka_Sorting_Algoritms
             porovnani++;
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         private void btn_Ready_Click(object sender, EventArgs e)
         {
             switch (algoritmus)
@@ -433,7 +403,7 @@ namespace Dlouhodobka_Sorting_Algoritms
 
                     stopwatch.Stop();
                     cas = stopwatch.Elapsed.TotalMilliseconds;
-                    lbCas.Text = "Uplynulý čas: " + cas + " ms";
+                    lbCas.Text = "Elapsed time: " + cas + " ms";
 
                     okno.Refresh();
                     Kontrola(numbers, pocet);
@@ -446,7 +416,7 @@ namespace Dlouhodobka_Sorting_Algoritms
 
                     stopwatch.Stop();
                     cas = stopwatch.Elapsed.TotalMilliseconds;
-                    lbCas.Text = "Uplynulý čas: " + cas + " ms";
+                    lbCas.Text = "Elapsed time: " + cas + " ms";
 
                     okno.Refresh();
                     Kontrola(numbers, pocet);
@@ -459,7 +429,7 @@ namespace Dlouhodobka_Sorting_Algoritms
 
                     stopwatch.Stop();
                     cas = stopwatch.Elapsed.TotalMilliseconds;
-                    lbCas.Text = "Uplynulý čas: " + cas + " ms";
+                    lbCas.Text = "Elapsed time: " + cas + " ms";
 
                     okno.Refresh();
                     Kontrola(numbers, pocet);
@@ -472,7 +442,7 @@ namespace Dlouhodobka_Sorting_Algoritms
 
                     stopwatch.Stop();
                     cas = stopwatch.Elapsed.TotalMilliseconds;
-                    lbCas.Text = "Uplynulý čas: " + cas + " ms";
+                    lbCas.Text = "Elapsed time: " + cas + " ms";
 
                     okno.Refresh();
                     Kontrola(numbers, pocet);
@@ -485,7 +455,7 @@ namespace Dlouhodobka_Sorting_Algoritms
 
                     stopwatch.Stop();
                     cas = stopwatch.Elapsed.TotalMilliseconds;
-                    lbCas.Text = "Uplynulý čas: " + cas + " ms";
+                    lbCas.Text = "Elapsed time: " + cas + " ms";
 
                     okno.Refresh();
                     Kontrola(numbers, pocet);
@@ -498,7 +468,7 @@ namespace Dlouhodobka_Sorting_Algoritms
 
                     stopwatch.Stop();
                     cas = stopwatch.Elapsed.TotalMilliseconds;
-                    lbCas.Text = "Uplynulý čas: " + cas + " ms";
+                    lbCas.Text = "Elapsed time: " + cas + " ms";
 
                     okno.Refresh();
                     Kontrola(numbers, pocet);
@@ -544,7 +514,7 @@ namespace Dlouhodobka_Sorting_Algoritms
                 okno.Refresh();
             }
             zapisy++;
-            lbZapis.Text = "Počet zápisů: " + zapisy;
+            lbZapis.Text = "Number of entries: " + zapisy;
         }
 
         public void GenPole()

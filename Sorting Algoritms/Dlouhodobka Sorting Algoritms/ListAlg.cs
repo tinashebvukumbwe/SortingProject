@@ -36,7 +36,7 @@ namespace Dlouhodobka_Sorting_Algoritms
                 }
                 catch
                 {
-                    MessageBox.Show("Zadejte čísla ve správném formátu", "Kritická chyba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Enter the numbers in the correct format", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
             }
@@ -78,51 +78,50 @@ namespace Dlouhodobka_Sorting_Algoritms
         private void btn_BubbleHelp_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
-                "Maximální doporučená velikost pole: 100\n" +
-                "Maximální doporučená velikost pole v rychlém režimu: 700\n \n" +
-                "Bubble sort je jednoduchý algoritmus řazení, který postupně prochází seznamem prvků a postupně prohazuje sousední prvky, pokud nejsou ve správném pořadí. Tento proces se opakuje, dokud není seznam plně setříděn.\n\n" +
-                "Tento algoritmus je poměrně jednoduchý, ale může být neefektivní pro velké seznamy, protože vyžaduje opakované průchody seznamem. Jeho časová složitost je O(n^2), kde n je počet prvků v seznamu."
-                , "Bubble Sort Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                "Maximum recommended field size: 100\n" +
+                "Maximum recommended field size in fast mode: 700\n \n" +
+                "Bubble sort is a simple sorting algorithm that sequentially goes through a list of elements and sequentially drops adjacent elements if they are not in the correct order. This process is repeated until the list is fully sorted.\n\n\n" +
+                "This algorithm is relatively simple, but can be inefficient for large lists because it requires repeated passes through the list. Its time complexity is O(n^2), where n is the number of elements in the list.",
+                "Bubble Sort Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btn_OddHelp_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
-                "Maximální doporučená velikost pole: 130\n" +
-                "Maximální doporučená velikost pole v rychlém režimu: 750\n \n" +
-                "Odd-even sort (také známý jako Brick sort) je algoritmus řazení podobný bubble sortu, ale pracuje s párovými průchody seznamem. Každý první průchod řadí sudé indexy a druhý průchod řadí liché indexy.\n\n" +
-                "Tento algoritmus má časovou složitost O(n^2), ale může být efektivnější než bubble sort pro některé typy dat a pro určité implementace."
+                "Maximum recommended field size: 130\n" +
+                "Maximum recommended field size in fast mode: 750\n \n" +
+                "Odd-even sort (also known as Brick sort) is a sorting algorithm similar to bubble sort, but works with paired passes through a list. Each first pass sorts even indexes and the second pass sorts odd indexes.\n\n\n" +
+                "This algorithm has a time complexity of O(n^2), but may be more efficient than bubble sort for some data types and for certain implementations."
                 , "Odd-Even Sort Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btn_QuickHelp_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
-               "Maximální doporučená velikost pole: 600\n" +
-               "Maximální doporučená velikost pole v rychlém režimu: 2000\n \n" +
-               "Quick sort je efektivní algoritmus řazení, který používá princip rozděl a panuj. Základní myšlenka spočívá v rozdělení seznamu na menší podseznamy, které jsou řazeny nezávisle na sobě. Tento algoritmus se často implementuje rekurzivně.\n\n" +
-               "Quick sort je efektivní algoritmus s průměrnou časovou složitostí O(n log n). Nicméně v nejhorším případě může mít časovou složitost O(n^2), což nastane, pokud je pivot vybrán tak, že rozdělení seznamu vytvoří jedno prázdné a jedno plné podpole."
-               , "Quick Sort Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               "Maximum recommended field size: 600\n" +
+               "Maximum recommended field size in fast mode: 2000\n \n" +
+               "Quick sort is an efficient sorting algorithm that uses the divide and conquer principle. The basic idea is to divide the list into smaller sublists that are sorted independently of each other. This algorithm is often implemented recursively.\n\n" +
+               "Quick sort is an efficient algorithm with an average time complexity of O(n log n). However, in the worst case it can have a time complexity of O(n^2), which occurs if the pivot is chosen such that splitting the list produces one empty and one full subarray.", "Quick Sort Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btn_BogoHelp_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
-               "Maximální doporučená velikost pole: 5\n" +
-               "Maximální doporučená velikost pole v rychlém režimu: 7\n \n" +
-               "Bogo sort je velmi neefektivní algoritmus řazení, který je spíše vtipný než použitelný v reálných situacích. Jeho základní princip spočívá v náhodném promíchání seznamu a kontrole, zda je seznam setříděn. Pokud není setříděn, promíchá se znovu a tento proces se opakuje, dokud není seznam setříděn.\n\n" +
-               "Bogo sort nemá garantovanou časovou složitost a může trvat prakticky nekonečně dlouho na setřídění seznamu, zejména pokud je seznam velký. Je to použitelné spíše jako ukázkový příklad neefektivního algoritmu než jako skutečně použitelný algoritmus řazení."
-               , "Bogo Sort Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               "Maximum recommended field size: 5\n" +
+               "Maximum recommended field size in fast mode: 7\n \n" +
+               "Bogo sort is a very inefficient sorting algorithm that is more of a joke than usable in real-world situations. Its basic principle is to randomly shuffle the list and check if the list is sorted. If it is not sorted, it is shuffled again and this process is repeated until the list is sorted." + 
+               "Bogo sort has no guaranteed time complexity and can take almost infinitely long to sort a list, especially if the list is large. It is more useful as an example of an inefficient algorithm than as a truly usable sorting algorithm.",
+               "Bogo Sort Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btn_HeapHelp_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
-               "Maximální doporučená velikost pole: 300\n" +
-               "Maximální doporučená velikost pole v rychlém režimu: 900\n \n" +
-               "Heap sort je efektivní algoritmus řazení, který využívá vlastností binárních hald. Haldy jsou binární stromy, ve kterých je každý uzel větší (nebo menší) než jeho děti, přičemž kořen stromu má nejvyšší (nebo nejnižší) hodnotu. V heap sortu se využívá max-heap (nebo min-heap), kde nejvyšší hodnota (nebo nejnižší hodnota) je na kořeni haldy.\n\n" +
-               "Heap sort má časovou složitost O(n log n), což ho činí efektivním algoritmem pro řazení, zejména pro velké seznamy."
-               , "Heap Sort Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               "Maximum recommended field size: 300\n" +
+               "Maximum recommended field size in fast mode: 900\n \n" +
+               "Heap sort is an efficient sorting algorithm that takes advantage of the properties of binary heaps. Heaps are binary trees in which each node is larger (or smaller) than its children, with the root of the tree having the highest (or lowest) value. The heap sort uses max-heap (or min-heap), where the highest value (or lowest value) is at the root of the heap.\n\n" +
+               "Heap sort has a time complexity of O(n log n), which makes it an efficient sorting algorithm, especially for large lists.",
+               "Heap Sort Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

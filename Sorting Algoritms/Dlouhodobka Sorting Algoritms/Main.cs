@@ -45,12 +45,17 @@ namespace Dlouhodobka_Sorting_Algoritms
         private void btn_Help_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
-               "Počet porovnání znamená, kolikrát algoritmus porovnává 2 čísla.\n\n" +
-               "Počet zápisů znamená, kolikrát algoritmus prohodil 2 čísla.\n\n" +
-               "Důvod doporučované maximální velikosti je ten, že po startu algoritmu není cesty zpět a musí se počkat na dokončení.\n\n" +
-               "Zašrtávací okénka 'Zakázat' vyloučí daný algoritmus z celkového testu.\n\n" +
-               "Lišta průběhu algoritmu(Progress bar) je u některých algorimů pouhý odhad, tudíž ho nelze brát jako rozhodující faktor. Pro přesnější grafické zobrazení přejděte do listu algoritmů a posuďte je individuálně."
+               "Number of comparisons means how many times the algorithm compares 2 numbers.\n\n" +
+               "The number of entries means how many times the algorithm swapped 2 numbers.\n\n\n" +
+               "The reason for the recommended maximum size is that once the algorithm starts, there is no going back and it has to wait for completion.\n\n\n" +
+               "The 'Disable' checkboxes will exclude the algorithm from the overall test.\n\n\n" +
+               "The algorithm's progress bar (Progress bar) is just an estimate for some algorithms, so it cannot be taken as a deciding factor. For a more accurate graphical representation, go to the algorithm sheet and judge them individually."
                , "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -74,6 +74,7 @@ namespace Dlouhodobka_Sorting_Algoritms
             this.cb_quick = new System.Windows.Forms.CheckBox();
             this.cb_bogo = new System.Windows.Forms.CheckBox();
             this.cb_heap = new System.Windows.Forms.CheckBox();
+            this.chartsBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -84,37 +85,42 @@ namespace Dlouhodobka_Sorting_Algoritms
             // 
             // pb_bubble
             // 
-            this.pb_bubble.Location = new System.Drawing.Point(12, 44);
+            this.pb_bubble.Location = new System.Drawing.Point(16, 54);
+            this.pb_bubble.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pb_bubble.Name = "pb_bubble";
-            this.pb_bubble.Size = new System.Drawing.Size(241, 19);
+            this.pb_bubble.Size = new System.Drawing.Size(321, 23);
             this.pb_bubble.TabIndex = 0;
             // 
             // pb_odd
             // 
-            this.pb_odd.Location = new System.Drawing.Point(12, 141);
+            this.pb_odd.Location = new System.Drawing.Point(16, 174);
+            this.pb_odd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pb_odd.Name = "pb_odd";
-            this.pb_odd.Size = new System.Drawing.Size(241, 19);
+            this.pb_odd.Size = new System.Drawing.Size(321, 23);
             this.pb_odd.TabIndex = 1;
             // 
             // pb_quick
             // 
-            this.pb_quick.Location = new System.Drawing.Point(12, 238);
+            this.pb_quick.Location = new System.Drawing.Point(16, 293);
+            this.pb_quick.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pb_quick.Name = "pb_quick";
-            this.pb_quick.Size = new System.Drawing.Size(241, 19);
+            this.pb_quick.Size = new System.Drawing.Size(321, 23);
             this.pb_quick.TabIndex = 2;
             // 
             // pb_bogo
             // 
-            this.pb_bogo.Location = new System.Drawing.Point(12, 332);
+            this.pb_bogo.Location = new System.Drawing.Point(16, 409);
+            this.pb_bogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pb_bogo.Name = "pb_bogo";
-            this.pb_bogo.Size = new System.Drawing.Size(241, 19);
+            this.pb_bogo.Size = new System.Drawing.Size(321, 23);
             this.pb_bogo.TabIndex = 3;
             // 
             // pb_heap
             // 
-            this.pb_heap.Location = new System.Drawing.Point(12, 426);
+            this.pb_heap.Location = new System.Drawing.Point(16, 524);
+            this.pb_heap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pb_heap.Name = "pb_heap";
-            this.pb_heap.Size = new System.Drawing.Size(241, 19);
+            this.pb_heap.Size = new System.Drawing.Size(321, 23);
             this.pb_heap.TabIndex = 4;
             // 
             // panel1
@@ -125,54 +131,64 @@ namespace Dlouhodobka_Sorting_Algoritms
             this.panel1.Controls.Add(this.lb_BubbleZapis);
             this.panel1.Controls.Add(this.lb_BubblePorovnani);
             this.panel1.Controls.Add(this.lb_BubbleCas);
-            this.panel1.Location = new System.Drawing.Point(341, 12);
+            this.panel1.Location = new System.Drawing.Point(455, 15);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(331, 87);
+            this.panel1.Size = new System.Drawing.Size(512, 107);
             this.panel1.TabIndex = 5;
             // 
             // lb_BubblePoradi
             // 
             this.lb_BubblePoradi.AutoSize = true;
-            this.lb_BubblePoradi.Location = new System.Drawing.Point(161, 49);
+            this.lb_BubblePoradi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lb_BubblePoradi.Location = new System.Drawing.Point(215, 60);
+            this.lb_BubblePoradi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_BubblePoradi.Name = "lb_BubblePoradi";
-            this.lb_BubblePoradi.Size = new System.Drawing.Size(58, 13);
+            this.lb_BubblePoradi.Size = new System.Drawing.Size(70, 18);
             this.lb_BubblePoradi.TabIndex = 13;
-            this.lb_BubblePoradi.Text = "Pořadí: ??";
+            this.lb_BubblePoradi.Text = "Order: ??";
             // 
             // lb_BubbleZapis
             // 
             this.lb_BubbleZapis.AutoSize = true;
-            this.lb_BubbleZapis.Location = new System.Drawing.Point(14, 49);
+            this.lb_BubbleZapis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lb_BubbleZapis.Location = new System.Drawing.Point(19, 60);
+            this.lb_BubbleZapis.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_BubbleZapis.Name = "lb_BubbleZapis";
-            this.lb_BubbleZapis.Size = new System.Drawing.Size(86, 13);
+            this.lb_BubbleZapis.Size = new System.Drawing.Size(150, 18);
             this.lb_BubbleZapis.TabIndex = 2;
-            this.lb_BubbleZapis.Text = "Počet zápisů: 50";
+            this.lb_BubbleZapis.Text = "Number of entries: ??";
             // 
             // lb_BubblePorovnani
             // 
             this.lb_BubblePorovnani.AutoSize = true;
-            this.lb_BubblePorovnani.Location = new System.Drawing.Point(161, 13);
+            this.lb_BubblePorovnani.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lb_BubblePorovnani.Location = new System.Drawing.Point(215, 16);
+            this.lb_BubblePorovnani.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_BubblePorovnani.Name = "lb_BubblePorovnani";
-            this.lb_BubblePorovnani.Size = new System.Drawing.Size(111, 13);
+            this.lb_BubblePorovnani.Size = new System.Drawing.Size(189, 18);
             this.lb_BubblePorovnani.TabIndex = 1;
-            this.lb_BubblePorovnani.Text = "Počet porovnání: 100";
+            this.lb_BubblePorovnani.Text = "Number of comparisons ??";
             // 
             // lb_BubbleCas
             // 
             this.lb_BubbleCas.AutoSize = true;
-            this.lb_BubbleCas.Location = new System.Drawing.Point(14, 13);
+            this.lb_BubbleCas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lb_BubbleCas.Location = new System.Drawing.Point(19, 16);
+            this.lb_BubbleCas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_BubbleCas.Name = "lb_BubbleCas";
-            this.lb_BubbleCas.Size = new System.Drawing.Size(59, 13);
+            this.lb_BubbleCas.Size = new System.Drawing.Size(90, 18);
             this.lb_BubbleCas.TabIndex = 0;
-            this.lb_BubbleCas.Text = "Čas: 10 ms";
+            this.lb_BubbleCas.Text = "Time: ?? ms";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(76, 17);
+            this.label1.Location = new System.Drawing.Point(101, 21);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 24);
+            this.label1.Size = new System.Drawing.Size(146, 29);
             this.label1.TabIndex = 8;
             this.label1.Text = " Bubble Sort";
             // 
@@ -180,9 +196,10 @@ namespace Dlouhodobka_Sorting_Algoritms
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(76, 114);
+            this.label2.Location = new System.Drawing.Point(101, 140);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 24);
+            this.label2.Size = new System.Drawing.Size(172, 29);
             this.label2.TabIndex = 9;
             this.label2.Text = "Odd-Even Sort";
             // 
@@ -190,9 +207,10 @@ namespace Dlouhodobka_Sorting_Algoritms
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(92, 211);
+            this.label3.Location = new System.Drawing.Point(123, 260);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 24);
+            this.label3.Size = new System.Drawing.Size(125, 29);
             this.label3.TabIndex = 10;
             this.label3.Text = "Quick Sort";
             // 
@@ -200,9 +218,10 @@ namespace Dlouhodobka_Sorting_Algoritms
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(96, 305);
+            this.label4.Location = new System.Drawing.Point(128, 375);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 24);
+            this.label4.Size = new System.Drawing.Size(121, 29);
             this.label4.TabIndex = 11;
             this.label4.Text = "Bogo Sort";
             // 
@@ -210,9 +229,10 @@ namespace Dlouhodobka_Sorting_Algoritms
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.Location = new System.Drawing.Point(92, 399);
+            this.label5.Location = new System.Drawing.Point(123, 491);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 24);
+            this.label5.Size = new System.Drawing.Size(121, 29);
             this.label5.TabIndex = 12;
             this.label5.Text = "Heap Sort";
             // 
@@ -224,46 +244,55 @@ namespace Dlouhodobka_Sorting_Algoritms
             this.panel2.Controls.Add(this.lb_OddZapis);
             this.panel2.Controls.Add(this.lb_OddPorovnani);
             this.panel2.Controls.Add(this.lb_OddCas);
-            this.panel2.Location = new System.Drawing.Point(341, 105);
+            this.panel2.Location = new System.Drawing.Point(455, 129);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(331, 87);
+            this.panel2.Size = new System.Drawing.Size(512, 107);
             this.panel2.TabIndex = 14;
             // 
             // lb_OddPoradi
             // 
             this.lb_OddPoradi.AutoSize = true;
-            this.lb_OddPoradi.Location = new System.Drawing.Point(161, 49);
+            this.lb_OddPoradi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lb_OddPoradi.Location = new System.Drawing.Point(215, 60);
+            this.lb_OddPoradi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_OddPoradi.Name = "lb_OddPoradi";
-            this.lb_OddPoradi.Size = new System.Drawing.Size(58, 13);
+            this.lb_OddPoradi.Size = new System.Drawing.Size(70, 18);
             this.lb_OddPoradi.TabIndex = 13;
-            this.lb_OddPoradi.Text = "Pořadí: ??";
+            this.lb_OddPoradi.Text = "Order: ??";
             // 
             // lb_OddZapis
             // 
             this.lb_OddZapis.AutoSize = true;
-            this.lb_OddZapis.Location = new System.Drawing.Point(14, 49);
+            this.lb_OddZapis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lb_OddZapis.Location = new System.Drawing.Point(19, 60);
+            this.lb_OddZapis.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_OddZapis.Name = "lb_OddZapis";
-            this.lb_OddZapis.Size = new System.Drawing.Size(86, 13);
+            this.lb_OddZapis.Size = new System.Drawing.Size(150, 18);
             this.lb_OddZapis.TabIndex = 2;
-            this.lb_OddZapis.Text = "Počet zápisů: 50";
+            this.lb_OddZapis.Text = "Number of entries: ??";
             // 
             // lb_OddPorovnani
             // 
             this.lb_OddPorovnani.AutoSize = true;
-            this.lb_OddPorovnani.Location = new System.Drawing.Point(161, 13);
+            this.lb_OddPorovnani.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lb_OddPorovnani.Location = new System.Drawing.Point(215, 16);
+            this.lb_OddPorovnani.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_OddPorovnani.Name = "lb_OddPorovnani";
-            this.lb_OddPorovnani.Size = new System.Drawing.Size(111, 13);
+            this.lb_OddPorovnani.Size = new System.Drawing.Size(189, 18);
             this.lb_OddPorovnani.TabIndex = 1;
-            this.lb_OddPorovnani.Text = "Počet porovnání: 100";
+            this.lb_OddPorovnani.Text = "Number of comparisons ??";
             // 
             // lb_OddCas
             // 
             this.lb_OddCas.AutoSize = true;
-            this.lb_OddCas.Location = new System.Drawing.Point(14, 13);
+            this.lb_OddCas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lb_OddCas.Location = new System.Drawing.Point(19, 16);
+            this.lb_OddCas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_OddCas.Name = "lb_OddCas";
-            this.lb_OddCas.Size = new System.Drawing.Size(59, 13);
+            this.lb_OddCas.Size = new System.Drawing.Size(90, 18);
             this.lb_OddCas.TabIndex = 0;
-            this.lb_OddCas.Text = "Čas: 10 ms";
+            this.lb_OddCas.Text = "Time: ?? ms";
             // 
             // panel3
             // 
@@ -273,46 +302,55 @@ namespace Dlouhodobka_Sorting_Algoritms
             this.panel3.Controls.Add(this.lb_QuickZapis);
             this.panel3.Controls.Add(this.lb_QuickPorovnani);
             this.panel3.Controls.Add(this.lb_QuickCas);
-            this.panel3.Location = new System.Drawing.Point(341, 198);
+            this.panel3.Location = new System.Drawing.Point(455, 244);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(331, 87);
+            this.panel3.Size = new System.Drawing.Size(512, 107);
             this.panel3.TabIndex = 14;
             // 
             // lb_QuickPoradi
             // 
             this.lb_QuickPoradi.AutoSize = true;
-            this.lb_QuickPoradi.Location = new System.Drawing.Point(161, 49);
+            this.lb_QuickPoradi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lb_QuickPoradi.Location = new System.Drawing.Point(215, 60);
+            this.lb_QuickPoradi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_QuickPoradi.Name = "lb_QuickPoradi";
-            this.lb_QuickPoradi.Size = new System.Drawing.Size(58, 13);
+            this.lb_QuickPoradi.Size = new System.Drawing.Size(70, 18);
             this.lb_QuickPoradi.TabIndex = 13;
-            this.lb_QuickPoradi.Text = "Pořadí: ??";
+            this.lb_QuickPoradi.Text = "Order: ??";
             // 
             // lb_QuickZapis
             // 
             this.lb_QuickZapis.AutoSize = true;
-            this.lb_QuickZapis.Location = new System.Drawing.Point(14, 49);
+            this.lb_QuickZapis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lb_QuickZapis.Location = new System.Drawing.Point(19, 60);
+            this.lb_QuickZapis.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_QuickZapis.Name = "lb_QuickZapis";
-            this.lb_QuickZapis.Size = new System.Drawing.Size(86, 13);
+            this.lb_QuickZapis.Size = new System.Drawing.Size(150, 18);
             this.lb_QuickZapis.TabIndex = 2;
-            this.lb_QuickZapis.Text = "Počet zápisů: 50";
+            this.lb_QuickZapis.Text = "Number of entries: ??";
             // 
             // lb_QuickPorovnani
             // 
             this.lb_QuickPorovnani.AutoSize = true;
-            this.lb_QuickPorovnani.Location = new System.Drawing.Point(161, 13);
+            this.lb_QuickPorovnani.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lb_QuickPorovnani.Location = new System.Drawing.Point(215, 16);
+            this.lb_QuickPorovnani.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_QuickPorovnani.Name = "lb_QuickPorovnani";
-            this.lb_QuickPorovnani.Size = new System.Drawing.Size(111, 13);
+            this.lb_QuickPorovnani.Size = new System.Drawing.Size(189, 18);
             this.lb_QuickPorovnani.TabIndex = 1;
-            this.lb_QuickPorovnani.Text = "Počet porovnání: 100";
+            this.lb_QuickPorovnani.Text = "Number of comparisons ??";
             // 
             // lb_QuickCas
             // 
             this.lb_QuickCas.AutoSize = true;
-            this.lb_QuickCas.Location = new System.Drawing.Point(14, 13);
+            this.lb_QuickCas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lb_QuickCas.Location = new System.Drawing.Point(19, 16);
+            this.lb_QuickCas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_QuickCas.Name = "lb_QuickCas";
-            this.lb_QuickCas.Size = new System.Drawing.Size(59, 13);
+            this.lb_QuickCas.Size = new System.Drawing.Size(90, 18);
             this.lb_QuickCas.TabIndex = 0;
-            this.lb_QuickCas.Text = "Čas: 10 ms";
+            this.lb_QuickCas.Text = "Time: ?? ms";
             // 
             // panel4
             // 
@@ -322,46 +360,55 @@ namespace Dlouhodobka_Sorting_Algoritms
             this.panel4.Controls.Add(this.lb_BogoZapis);
             this.panel4.Controls.Add(this.lb_BogoPorovnani);
             this.panel4.Controls.Add(this.lb_BogoCas);
-            this.panel4.Location = new System.Drawing.Point(341, 291);
+            this.panel4.Location = new System.Drawing.Point(455, 358);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(331, 87);
+            this.panel4.Size = new System.Drawing.Size(512, 107);
             this.panel4.TabIndex = 14;
             // 
             // lb_BogoPoradi
             // 
             this.lb_BogoPoradi.AutoSize = true;
-            this.lb_BogoPoradi.Location = new System.Drawing.Point(161, 49);
+            this.lb_BogoPoradi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lb_BogoPoradi.Location = new System.Drawing.Point(215, 60);
+            this.lb_BogoPoradi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_BogoPoradi.Name = "lb_BogoPoradi";
-            this.lb_BogoPoradi.Size = new System.Drawing.Size(58, 13);
+            this.lb_BogoPoradi.Size = new System.Drawing.Size(70, 18);
             this.lb_BogoPoradi.TabIndex = 13;
-            this.lb_BogoPoradi.Text = "Pořadí: ??";
+            this.lb_BogoPoradi.Text = "Order: ??";
             // 
             // lb_BogoZapis
             // 
             this.lb_BogoZapis.AutoSize = true;
-            this.lb_BogoZapis.Location = new System.Drawing.Point(14, 49);
+            this.lb_BogoZapis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lb_BogoZapis.Location = new System.Drawing.Point(19, 60);
+            this.lb_BogoZapis.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_BogoZapis.Name = "lb_BogoZapis";
-            this.lb_BogoZapis.Size = new System.Drawing.Size(86, 13);
+            this.lb_BogoZapis.Size = new System.Drawing.Size(150, 18);
             this.lb_BogoZapis.TabIndex = 2;
-            this.lb_BogoZapis.Text = "Počet zápisů: 50";
+            this.lb_BogoZapis.Text = "Number of entries: ??";
             // 
             // lb_BogoPorovnani
             // 
             this.lb_BogoPorovnani.AutoSize = true;
-            this.lb_BogoPorovnani.Location = new System.Drawing.Point(161, 13);
+            this.lb_BogoPorovnani.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lb_BogoPorovnani.Location = new System.Drawing.Point(215, 16);
+            this.lb_BogoPorovnani.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_BogoPorovnani.Name = "lb_BogoPorovnani";
-            this.lb_BogoPorovnani.Size = new System.Drawing.Size(111, 13);
+            this.lb_BogoPorovnani.Size = new System.Drawing.Size(189, 18);
             this.lb_BogoPorovnani.TabIndex = 1;
-            this.lb_BogoPorovnani.Text = "Počet porovnání: 100";
+            this.lb_BogoPorovnani.Text = "Number of comparisons ??";
             // 
             // lb_BogoCas
             // 
             this.lb_BogoCas.AutoSize = true;
-            this.lb_BogoCas.Location = new System.Drawing.Point(14, 13);
+            this.lb_BogoCas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lb_BogoCas.Location = new System.Drawing.Point(19, 16);
+            this.lb_BogoCas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_BogoCas.Name = "lb_BogoCas";
-            this.lb_BogoCas.Size = new System.Drawing.Size(59, 13);
+            this.lb_BogoCas.Size = new System.Drawing.Size(90, 18);
             this.lb_BogoCas.TabIndex = 0;
-            this.lb_BogoCas.Text = "Čas: 10 ms";
+            this.lb_BogoCas.Text = "Time: ?? ms";
             // 
             // panel5
             // 
@@ -371,67 +418,79 @@ namespace Dlouhodobka_Sorting_Algoritms
             this.panel5.Controls.Add(this.lb_HeapZapis);
             this.panel5.Controls.Add(this.lb_HeapPorovnani);
             this.panel5.Controls.Add(this.lb_HeapCas);
-            this.panel5.Location = new System.Drawing.Point(341, 384);
+            this.panel5.Location = new System.Drawing.Point(455, 473);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(331, 87);
+            this.panel5.Size = new System.Drawing.Size(512, 107);
             this.panel5.TabIndex = 14;
             // 
             // lb_HeapPoradi
             // 
             this.lb_HeapPoradi.AutoSize = true;
-            this.lb_HeapPoradi.Location = new System.Drawing.Point(161, 49);
+            this.lb_HeapPoradi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lb_HeapPoradi.Location = new System.Drawing.Point(215, 60);
+            this.lb_HeapPoradi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_HeapPoradi.Name = "lb_HeapPoradi";
-            this.lb_HeapPoradi.Size = new System.Drawing.Size(58, 13);
+            this.lb_HeapPoradi.Size = new System.Drawing.Size(70, 18);
             this.lb_HeapPoradi.TabIndex = 13;
-            this.lb_HeapPoradi.Text = "Pořadí: ??";
+            this.lb_HeapPoradi.Text = "Order: ??";
             // 
             // lb_HeapZapis
             // 
             this.lb_HeapZapis.AutoSize = true;
-            this.lb_HeapZapis.Location = new System.Drawing.Point(14, 49);
+            this.lb_HeapZapis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lb_HeapZapis.Location = new System.Drawing.Point(19, 60);
+            this.lb_HeapZapis.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_HeapZapis.Name = "lb_HeapZapis";
-            this.lb_HeapZapis.Size = new System.Drawing.Size(86, 13);
+            this.lb_HeapZapis.Size = new System.Drawing.Size(150, 18);
             this.lb_HeapZapis.TabIndex = 2;
-            this.lb_HeapZapis.Text = "Počet zápisů: 50";
+            this.lb_HeapZapis.Text = "Number of entries: ??";
             // 
             // lb_HeapPorovnani
             // 
             this.lb_HeapPorovnani.AutoSize = true;
-            this.lb_HeapPorovnani.Location = new System.Drawing.Point(161, 13);
+            this.lb_HeapPorovnani.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lb_HeapPorovnani.Location = new System.Drawing.Point(215, 16);
+            this.lb_HeapPorovnani.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_HeapPorovnani.Name = "lb_HeapPorovnani";
-            this.lb_HeapPorovnani.Size = new System.Drawing.Size(111, 13);
+            this.lb_HeapPorovnani.Size = new System.Drawing.Size(189, 18);
             this.lb_HeapPorovnani.TabIndex = 1;
-            this.lb_HeapPorovnani.Text = "Počet porovnání: 100";
+            this.lb_HeapPorovnani.Text = "Number of comparisons ??";
             // 
             // lb_HeapCas
             // 
             this.lb_HeapCas.AutoSize = true;
-            this.lb_HeapCas.Location = new System.Drawing.Point(14, 13);
+            this.lb_HeapCas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lb_HeapCas.Location = new System.Drawing.Point(19, 16);
+            this.lb_HeapCas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_HeapCas.Name = "lb_HeapCas";
-            this.lb_HeapCas.Size = new System.Drawing.Size(59, 13);
+            this.lb_HeapCas.Size = new System.Drawing.Size(90, 18);
             this.lb_HeapCas.TabIndex = 0;
-            this.lb_HeapCas.Text = "Čas: 10 ms";
+            this.lb_HeapCas.Text = "Time: ?? ms";
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Controls.Add(this.chartsBtn);
             this.panel6.Controls.Add(this.btn_reset);
             this.panel6.Controls.Add(this.label26);
             this.panel6.Controls.Add(this.tb_pocet);
             this.panel6.Controls.Add(this.btn_start);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 477);
+            this.panel6.Location = new System.Drawing.Point(0, 588);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(684, 94);
+            this.panel6.Size = new System.Drawing.Size(980, 115);
             this.panel6.TabIndex = 15;
             // 
             // btn_reset
             // 
             this.btn_reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btn_reset.Location = new System.Drawing.Point(245, 13);
+            this.btn_reset.Location = new System.Drawing.Point(217, 21);
+            this.btn_reset.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_reset.Name = "btn_reset";
-            this.btn_reset.Size = new System.Drawing.Size(149, 69);
+            this.btn_reset.Size = new System.Drawing.Size(170, 74);
             this.btn_reset.TabIndex = 3;
             this.btn_reset.Text = "Reset";
             this.btn_reset.UseVisualStyleBackColor = true;
@@ -440,25 +499,32 @@ namespace Dlouhodobka_Sorting_Algoritms
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(444, 46);
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label26.Location = new System.Drawing.Point(609, 48);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(68, 13);
+            this.label26.Size = new System.Drawing.Size(192, 25);
             this.label26.TabIndex = 2;
-            this.label26.Text = "Počet prvků:";
+            this.label26.Text = "Number of elements:";
+            this.label26.Click += new System.EventHandler(this.label26_Click);
             // 
             // tb_pocet
             // 
-            this.tb_pocet.Location = new System.Drawing.Point(532, 43);
+            this.tb_pocet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tb_pocet.Location = new System.Drawing.Point(809, 49);
+            this.tb_pocet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_pocet.Name = "tb_pocet";
-            this.tb_pocet.Size = new System.Drawing.Size(100, 20);
+            this.tb_pocet.Size = new System.Drawing.Size(132, 24);
             this.tb_pocet.TabIndex = 1;
+            this.tb_pocet.Text = "1000";
             // 
             // btn_start
             // 
             this.btn_start.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btn_start.Location = new System.Drawing.Point(40, 13);
+            this.btn_start.Location = new System.Drawing.Point(10, 21);
+            this.btn_start.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_start.Name = "btn_start";
-            this.btn_start.Size = new System.Drawing.Size(149, 69);
+            this.btn_start.Size = new System.Drawing.Size(170, 74);
             this.btn_start.TabIndex = 0;
             this.btn_start.Text = "Start";
             this.btn_start.UseVisualStyleBackColor = true;
@@ -467,58 +533,77 @@ namespace Dlouhodobka_Sorting_Algoritms
             // cb_bubble
             // 
             this.cb_bubble.AutoSize = true;
-            this.cb_bubble.Location = new System.Drawing.Point(259, 44);
+            this.cb_bubble.Location = new System.Drawing.Point(345, 54);
+            this.cb_bubble.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cb_bubble.Name = "cb_bubble";
-            this.cb_bubble.Size = new System.Drawing.Size(65, 17);
+            this.cb_bubble.Size = new System.Drawing.Size(76, 20);
             this.cb_bubble.TabIndex = 16;
-            this.cb_bubble.Text = "Zakázat";
+            this.cb_bubble.Text = "Disable";
             this.cb_bubble.UseVisualStyleBackColor = true;
             // 
             // cb_odd
             // 
             this.cb_odd.AutoSize = true;
-            this.cb_odd.Location = new System.Drawing.Point(259, 143);
+            this.cb_odd.Location = new System.Drawing.Point(345, 176);
+            this.cb_odd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cb_odd.Name = "cb_odd";
-            this.cb_odd.Size = new System.Drawing.Size(65, 17);
+            this.cb_odd.Size = new System.Drawing.Size(76, 20);
             this.cb_odd.TabIndex = 17;
-            this.cb_odd.Text = "Zakázat";
+            this.cb_odd.Text = "Disable";
             this.cb_odd.UseVisualStyleBackColor = true;
             // 
             // cb_quick
             // 
             this.cb_quick.AutoSize = true;
-            this.cb_quick.Location = new System.Drawing.Point(259, 240);
+            this.cb_quick.Location = new System.Drawing.Point(345, 295);
+            this.cb_quick.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cb_quick.Name = "cb_quick";
-            this.cb_quick.Size = new System.Drawing.Size(65, 17);
+            this.cb_quick.Size = new System.Drawing.Size(76, 20);
             this.cb_quick.TabIndex = 18;
-            this.cb_quick.Text = "Zakázat";
+            this.cb_quick.Text = "Disable";
             this.cb_quick.UseVisualStyleBackColor = true;
             // 
             // cb_bogo
             // 
             this.cb_bogo.AutoSize = true;
-            this.cb_bogo.Location = new System.Drawing.Point(259, 334);
+            this.cb_bogo.Checked = true;
+            this.cb_bogo.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cb_bogo.Location = new System.Drawing.Point(345, 411);
+            this.cb_bogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cb_bogo.Name = "cb_bogo";
-            this.cb_bogo.Size = new System.Drawing.Size(65, 17);
+            this.cb_bogo.Size = new System.Drawing.Size(76, 20);
             this.cb_bogo.TabIndex = 19;
-            this.cb_bogo.Text = "Zakázat";
+            this.cb_bogo.Text = "Disable";
             this.cb_bogo.UseVisualStyleBackColor = true;
             // 
             // cb_heap
             // 
             this.cb_heap.AutoSize = true;
-            this.cb_heap.Location = new System.Drawing.Point(259, 429);
+            this.cb_heap.Location = new System.Drawing.Point(345, 528);
+            this.cb_heap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cb_heap.Name = "cb_heap";
-            this.cb_heap.Size = new System.Drawing.Size(65, 17);
+            this.cb_heap.Size = new System.Drawing.Size(76, 20);
             this.cb_heap.TabIndex = 20;
-            this.cb_heap.Text = "Zakázat";
+            this.cb_heap.Text = "Disable";
             this.cb_heap.UseVisualStyleBackColor = true;
+            // 
+            // chartsBtn
+            // 
+            this.chartsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.chartsBtn.Location = new System.Drawing.Point(424, 22);
+            this.chartsBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chartsBtn.Name = "chartsBtn";
+            this.chartsBtn.Size = new System.Drawing.Size(170, 74);
+            this.chartsBtn.TabIndex = 4;
+            this.chartsBtn.Text = "Charts";
+            this.chartsBtn.UseVisualStyleBackColor = true;
+            this.chartsBtn.Click += new System.EventHandler(this.chartsBtn_Click);
             // 
             // Porovnání
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 571);
+            this.ClientSize = new System.Drawing.Size(980, 703);
             this.Controls.Add(this.cb_heap);
             this.Controls.Add(this.cb_bogo);
             this.Controls.Add(this.cb_quick);
@@ -540,8 +625,9 @@ namespace Dlouhodobka_Sorting_Algoritms
             this.Controls.Add(this.pb_quick);
             this.Controls.Add(this.pb_odd);
             this.Controls.Add(this.pb_bubble);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Porovnání";
-            this.Text = "Porovnání Všech Algoritmů";
+            this.Text = "Disable";
             this.Load += new System.EventHandler(this.Porovnání_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -607,5 +693,6 @@ namespace Dlouhodobka_Sorting_Algoritms
         private System.Windows.Forms.CheckBox cb_quick;
         private System.Windows.Forms.CheckBox cb_bogo;
         private System.Windows.Forms.CheckBox cb_heap;
+        private System.Windows.Forms.Button chartsBtn;
     }
 }
