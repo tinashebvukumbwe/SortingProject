@@ -124,7 +124,11 @@ namespace Dlouhodobka_Sorting_Algoritms
             btn_start.BackColor = Color.LightGray;
 
             int repet = Convert.ToInt32(tb_repet.Text);
-            for (int i = 0; i <= repet; i++)
+
+            if (repet <= 0)
+                MessageBox.Show("ERROR\n\n" + "Choose number higher than 0", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            for (int i = 1; i <= repet; i++)
             {
                 check.Text = $"{i}";
                 Reset();
