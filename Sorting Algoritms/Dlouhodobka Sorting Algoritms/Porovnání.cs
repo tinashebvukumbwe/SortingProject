@@ -117,9 +117,9 @@ namespace Dlouhodobka_Sorting_Algoritms
             lbHeapZapis = lb_HeapZapis;
         }
 
-        private void btn_start_Click(object sender, EventArgs e)
+        private async void btn_start_Click(object sender, EventArgs e)
         {
-            
+
             btn_start.Enabled = false;
             btn_start.BackColor = Color.LightGray;
 
@@ -145,19 +145,19 @@ namespace Dlouhodobka_Sorting_Algoritms
                 pbQuick.Maximum = pocet + (pocet / 10);
 
                 GenPole();
-                BubbleSortAlgorithm(numbers);
+                await Task.Run(() => BubbleSortAlgorithm(numbers));
                 porovnani = 0;
                 zapis = 0;
 
                 GenPole();
-                OddEvenSortAlgorithm(numbers);
+                await Task.Run(() => OddEvenSortAlgorithm(numbers));
                 porovnani = 0;
                 zapis = 0;
 
                 GenPole();
                 stopwatch = new Stopwatch();
                 stopwatch.Start();
-                Quick_Sort(numbers, 0, pocet - 1);
+                await Task.Run(() => Quick_Sort(numbers, 0, pocet - 1));
                 stopwatch.Stop();
                 if (!cbQuick.Checked)
                 {
@@ -172,12 +172,23 @@ namespace Dlouhodobka_Sorting_Algoritms
                 zapis = 0;
 
                 GenPole();
-                BogoSort(numbers);
+                await Task.Run(() => BogoSort(numbers));
+                stopwatch.Stop();
+                if (!cbBogo.Checked)
+                {
+                    pbBogo.Value = pbBogo.Maximum;
+                    cas = stopwatch.Elapsed.TotalMilliseconds;
+                    casy[2] = cas;
+                    pbBogo.Value = pbBogo.Maximum;
+                    lbBogoCas.Text = "Čas: " + cas + " ms";
+                    lbBogoPorovnani.Text = "Počet porovnání: " + porovnani;
+                    lbBogoZapis.Text = "Počet zápisů: " + zapis;
+                }
                 porovnani = 0;
                 zapis = 0;
 
                 GenPole();
-                HeapSort(numbers);
+                await Task.Run(() => HeapSort(numbers));
 
 
                 lbBubblePoradi.Text = "Order: " + NajdiPoradi(casy, 0);
@@ -186,8 +197,8 @@ namespace Dlouhodobka_Sorting_Algoritms
                 lbBogoPoradi.Text = "Order: " + NajdiPoradi(casy, 3);
                 lbHeapPoradi.Text = "Order: " + NajdiPoradi(casy, 4);
 
-                
-            }     
+
+            }
         }
 
         public void GenPole()
@@ -233,7 +244,7 @@ namespace Dlouhodobka_Sorting_Algoritms
         }
 
         #region Sorts
-        static void BubbleSortAlgorithm(int[] arr)
+        void BubbleSortAlgorithm(int[] arr)
         {
             if (cbBubble.Checked)
                 return;
@@ -252,16 +263,24 @@ namespace Dlouhodobka_Sorting_Algoritms
                     }
                     porovnani++;
                 }
-                pbBubble.Value++;
+                this.Invoke((MethodInvoker)delegate
+                {
+                    pbBubble.Value++;
+                    pbBubble.Refresh();
+                });
             }
 
-            stopwatch.Stop();
-            cas = stopwatch.Elapsed.TotalMilliseconds;
-            casy[0] = cas;
+            this.Invoke((MethodInvoker)delegate
+            {
+                stopwatch.Stop();
+                cas = stopwatch.Elapsed.TotalMilliseconds;
+                casy[0] = cas;
 
-            lbBubbleCas.Text = $"Time: {cas} ms";
-            lbBubblePorovnani.Text = $"Number of comparisons: {porovnani}";
-            lbBubbleZapis.Text = $"Number of entries: {zapis}";
+                lbBubbleCas.Text = $"Time: {cas} ms";
+                lbBubblePorovnani.Text = $"Number of comparisons: {porovnani}";
+                lbBubbleZapis.Text = $"Number of entries: {zapis}";
+            });
+
         }
 
         static void Swap(int[] arr, int i, int j)
@@ -274,7 +293,7 @@ namespace Dlouhodobka_Sorting_Algoritms
         }
 
         // Metoda pro provádění odd-even sort
-        static void OddEvenSortAlgorithm(int[] arr)
+        void OddEvenSortAlgorithm(int[] arr)
         {
             if (cbOdd.Checked)
                 return;
@@ -300,7 +319,11 @@ namespace Dlouhodobka_Sorting_Algoritms
                     porovnani++;
                 }
 
-                pbOdd.Value++;
+                this.Invoke((MethodInvoker)delegate
+                {
+                    pbOdd.Value++;
+                    pbOdd.Refresh();
+                });
 
                 for (int i = 0; i < n - 1; i += 2) // Sudá fáze
                 {
@@ -312,21 +335,28 @@ namespace Dlouhodobka_Sorting_Algoritms
                     porovnani++;
                 }
 
-                pbOdd.Value++;
+                this.Invoke((MethodInvoker)delegate
+                {
+                    pbOdd.Value++;
+                    pbOdd.Refresh();
+                });
             }
 
-            pbOdd.Value = pbOdd.Maximum;
+            this.Invoke((MethodInvoker)delegate
+            {
+                pbOdd.Value = pbOdd.Maximum;
 
-            stopwatch.Stop();
-            cas = stopwatch.Elapsed.TotalMilliseconds;
-            casy[1] = cas;
+                stopwatch.Stop();
+                cas = stopwatch.Elapsed.TotalMilliseconds;
+                casy[1] = cas;
 
-            lbOddCas.Text = $"Time: {cas} ms";
-            lbOddPorovnani.Text = $"Number of comparisons: {porovnani}";
-            lbOddZapis.Text = $"Number of entries: {zapis}";
+                lbOddCas.Text = $"Time: {cas} ms";
+                lbOddPorovnani.Text = $"Number of comparisons: {porovnani}";
+                lbOddZapis.Text = $"Number of entries: {zapis}";
+            });
         }
 
-        private static void Quick_Sort(int[] arr, int left, int right)
+        private void Quick_Sort(int[] arr, int left, int right)
         {
             if (cbQuick.Checked)
                 return;
@@ -347,7 +377,11 @@ namespace Dlouhodobka_Sorting_Algoritms
                     Quick_Sort(arr, pivot + 1, right);
                 }
             }
-            pbQuick.Value++;
+            this.Invoke((MethodInvoker)delegate
+            {
+                pbQuick.Value++;
+                pbQuick.Refresh();
+            });
         }
 
         // Method to partition the array
@@ -460,16 +494,24 @@ namespace Dlouhodobka_Sorting_Algoritms
 
                 // call max heapify on the reduced heap
                 Heapify(array, i, 0);
-                pbHeap.Value++;
+                this.Invoke((MethodInvoker)delegate
+                {
+                    pbHeap.Value++;
+                    pbHeap.Refresh();
+                });
             }
 
-            stopwatch.Stop();
-            cas = stopwatch.Elapsed.TotalMilliseconds;
-            casy[4] = cas;
+            this.Invoke((MethodInvoker)delegate
+            {
+                stopwatch.Stop();
+                cas = stopwatch.Elapsed.TotalMilliseconds;
+                casy[4] = cas;
 
-            lbHeapCas.Text = $"Time: {cas} ms";
-            lbHeapPorovnani.Text = $"Number of comparisons: {porovnani}";
-            lbHeapZapis.Text = $"Number of entries: {zapis}";
+                lbHeapCas.Text = $"Time: {cas} ms";
+                lbHeapPorovnani.Text = $"Number of comparisons: {porovnani}";
+                lbHeapZapis.Text = $"Number of entries: {zapis}";
+            });
+
         }
 
         void Heapify(int[] array, int n, int i)
