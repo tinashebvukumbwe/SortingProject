@@ -65,6 +65,9 @@ namespace Dlouhodobka_Sorting_Algoritms
             this.lb_HeapPorovnani = new System.Windows.Forms.Label();
             this.lb_HeapCas = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tb_repet = new System.Windows.Forms.TextBox();
+            this.chartsBtn = new System.Windows.Forms.Button();
             this.btn_reset = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
             this.tb_pocet = new System.Windows.Forms.TextBox();
@@ -74,7 +77,7 @@ namespace Dlouhodobka_Sorting_Algoritms
             this.cb_quick = new System.Windows.Forms.CheckBox();
             this.cb_bogo = new System.Windows.Forms.CheckBox();
             this.cb_heap = new System.Windows.Forms.CheckBox();
-            this.chartsBtn = new System.Windows.Forms.Button();
+            this.check = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -86,7 +89,7 @@ namespace Dlouhodobka_Sorting_Algoritms
             // pb_bubble
             // 
             this.pb_bubble.Location = new System.Drawing.Point(16, 54);
-            this.pb_bubble.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pb_bubble.Margin = new System.Windows.Forms.Padding(4);
             this.pb_bubble.Name = "pb_bubble";
             this.pb_bubble.Size = new System.Drawing.Size(321, 23);
             this.pb_bubble.TabIndex = 0;
@@ -94,7 +97,7 @@ namespace Dlouhodobka_Sorting_Algoritms
             // pb_odd
             // 
             this.pb_odd.Location = new System.Drawing.Point(16, 174);
-            this.pb_odd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pb_odd.Margin = new System.Windows.Forms.Padding(4);
             this.pb_odd.Name = "pb_odd";
             this.pb_odd.Size = new System.Drawing.Size(321, 23);
             this.pb_odd.TabIndex = 1;
@@ -102,7 +105,7 @@ namespace Dlouhodobka_Sorting_Algoritms
             // pb_quick
             // 
             this.pb_quick.Location = new System.Drawing.Point(16, 293);
-            this.pb_quick.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pb_quick.Margin = new System.Windows.Forms.Padding(4);
             this.pb_quick.Name = "pb_quick";
             this.pb_quick.Size = new System.Drawing.Size(321, 23);
             this.pb_quick.TabIndex = 2;
@@ -110,7 +113,7 @@ namespace Dlouhodobka_Sorting_Algoritms
             // pb_bogo
             // 
             this.pb_bogo.Location = new System.Drawing.Point(16, 409);
-            this.pb_bogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pb_bogo.Margin = new System.Windows.Forms.Padding(4);
             this.pb_bogo.Name = "pb_bogo";
             this.pb_bogo.Size = new System.Drawing.Size(321, 23);
             this.pb_bogo.TabIndex = 3;
@@ -118,7 +121,7 @@ namespace Dlouhodobka_Sorting_Algoritms
             // pb_heap
             // 
             this.pb_heap.Location = new System.Drawing.Point(16, 524);
-            this.pb_heap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pb_heap.Margin = new System.Windows.Forms.Padding(4);
             this.pb_heap.Name = "pb_heap";
             this.pb_heap.Size = new System.Drawing.Size(321, 23);
             this.pb_heap.TabIndex = 4;
@@ -132,7 +135,7 @@ namespace Dlouhodobka_Sorting_Algoritms
             this.panel1.Controls.Add(this.lb_BubblePorovnani);
             this.panel1.Controls.Add(this.lb_BubbleCas);
             this.panel1.Location = new System.Drawing.Point(455, 15);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(512, 107);
             this.panel1.TabIndex = 5;
@@ -245,7 +248,7 @@ namespace Dlouhodobka_Sorting_Algoritms
             this.panel2.Controls.Add(this.lb_OddPorovnani);
             this.panel2.Controls.Add(this.lb_OddCas);
             this.panel2.Location = new System.Drawing.Point(455, 129);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(512, 107);
             this.panel2.TabIndex = 14;
@@ -303,7 +306,7 @@ namespace Dlouhodobka_Sorting_Algoritms
             this.panel3.Controls.Add(this.lb_QuickPorovnani);
             this.panel3.Controls.Add(this.lb_QuickCas);
             this.panel3.Location = new System.Drawing.Point(455, 244);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(512, 107);
             this.panel3.TabIndex = 14;
@@ -361,7 +364,7 @@ namespace Dlouhodobka_Sorting_Algoritms
             this.panel4.Controls.Add(this.lb_BogoPorovnani);
             this.panel4.Controls.Add(this.lb_BogoCas);
             this.panel4.Location = new System.Drawing.Point(455, 358);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(512, 107);
             this.panel4.TabIndex = 14;
@@ -419,7 +422,7 @@ namespace Dlouhodobka_Sorting_Algoritms
             this.panel5.Controls.Add(this.lb_HeapPorovnani);
             this.panel5.Controls.Add(this.lb_HeapCas);
             this.panel5.Location = new System.Drawing.Point(455, 473);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(512, 107);
             this.panel5.TabIndex = 14;
@@ -472,6 +475,9 @@ namespace Dlouhodobka_Sorting_Algoritms
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Controls.Add(this.check);
+            this.panel6.Controls.Add(this.label6);
+            this.panel6.Controls.Add(this.tb_repet);
             this.panel6.Controls.Add(this.chartsBtn);
             this.panel6.Controls.Add(this.btn_reset);
             this.panel6.Controls.Add(this.label26);
@@ -479,16 +485,49 @@ namespace Dlouhodobka_Sorting_Algoritms
             this.panel6.Controls.Add(this.btn_start);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel6.Location = new System.Drawing.Point(0, 588);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(980, 115);
             this.panel6.TabIndex = 15;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.Location = new System.Drawing.Point(602, 59);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(202, 25);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Number of repetitions:";
+            // 
+            // tb_repet
+            // 
+            this.tb_repet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tb_repet.Location = new System.Drawing.Point(823, 60);
+            this.tb_repet.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_repet.Name = "tb_repet";
+            this.tb_repet.Size = new System.Drawing.Size(132, 24);
+            this.tb_repet.TabIndex = 5;
+            this.tb_repet.Text = "10";
+            // 
+            // chartsBtn
+            // 
+            this.chartsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.chartsBtn.Location = new System.Drawing.Point(424, 22);
+            this.chartsBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.chartsBtn.Name = "chartsBtn";
+            this.chartsBtn.Size = new System.Drawing.Size(170, 74);
+            this.chartsBtn.TabIndex = 4;
+            this.chartsBtn.Text = "Charts";
+            this.chartsBtn.UseVisualStyleBackColor = true;
+            this.chartsBtn.Click += new System.EventHandler(this.chartsBtn_Click);
             // 
             // btn_reset
             // 
             this.btn_reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btn_reset.Location = new System.Drawing.Point(217, 21);
-            this.btn_reset.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_reset.Margin = new System.Windows.Forms.Padding(4);
             this.btn_reset.Name = "btn_reset";
             this.btn_reset.Size = new System.Drawing.Size(170, 74);
             this.btn_reset.TabIndex = 3;
@@ -500,19 +539,18 @@ namespace Dlouhodobka_Sorting_Algoritms
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label26.Location = new System.Drawing.Point(609, 48);
+            this.label26.Location = new System.Drawing.Point(602, 23);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(192, 25);
             this.label26.TabIndex = 2;
             this.label26.Text = "Number of elements:";
-            this.label26.Click += new System.EventHandler(this.label26_Click);
             // 
             // tb_pocet
             // 
             this.tb_pocet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.tb_pocet.Location = new System.Drawing.Point(809, 49);
-            this.tb_pocet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_pocet.Location = new System.Drawing.Point(823, 23);
+            this.tb_pocet.Margin = new System.Windows.Forms.Padding(4);
             this.tb_pocet.Name = "tb_pocet";
             this.tb_pocet.Size = new System.Drawing.Size(132, 24);
             this.tb_pocet.TabIndex = 1;
@@ -522,7 +560,7 @@ namespace Dlouhodobka_Sorting_Algoritms
             // 
             this.btn_start.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btn_start.Location = new System.Drawing.Point(10, 21);
-            this.btn_start.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_start.Margin = new System.Windows.Forms.Padding(4);
             this.btn_start.Name = "btn_start";
             this.btn_start.Size = new System.Drawing.Size(170, 74);
             this.btn_start.TabIndex = 0;
@@ -534,7 +572,7 @@ namespace Dlouhodobka_Sorting_Algoritms
             // 
             this.cb_bubble.AutoSize = true;
             this.cb_bubble.Location = new System.Drawing.Point(345, 54);
-            this.cb_bubble.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_bubble.Margin = new System.Windows.Forms.Padding(4);
             this.cb_bubble.Name = "cb_bubble";
             this.cb_bubble.Size = new System.Drawing.Size(76, 20);
             this.cb_bubble.TabIndex = 16;
@@ -545,7 +583,7 @@ namespace Dlouhodobka_Sorting_Algoritms
             // 
             this.cb_odd.AutoSize = true;
             this.cb_odd.Location = new System.Drawing.Point(345, 176);
-            this.cb_odd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_odd.Margin = new System.Windows.Forms.Padding(4);
             this.cb_odd.Name = "cb_odd";
             this.cb_odd.Size = new System.Drawing.Size(76, 20);
             this.cb_odd.TabIndex = 17;
@@ -556,7 +594,7 @@ namespace Dlouhodobka_Sorting_Algoritms
             // 
             this.cb_quick.AutoSize = true;
             this.cb_quick.Location = new System.Drawing.Point(345, 295);
-            this.cb_quick.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_quick.Margin = new System.Windows.Forms.Padding(4);
             this.cb_quick.Name = "cb_quick";
             this.cb_quick.Size = new System.Drawing.Size(76, 20);
             this.cb_quick.TabIndex = 18;
@@ -569,7 +607,7 @@ namespace Dlouhodobka_Sorting_Algoritms
             this.cb_bogo.Checked = true;
             this.cb_bogo.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cb_bogo.Location = new System.Drawing.Point(345, 411);
-            this.cb_bogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_bogo.Margin = new System.Windows.Forms.Padding(4);
             this.cb_bogo.Name = "cb_bogo";
             this.cb_bogo.Size = new System.Drawing.Size(76, 20);
             this.cb_bogo.TabIndex = 19;
@@ -580,24 +618,21 @@ namespace Dlouhodobka_Sorting_Algoritms
             // 
             this.cb_heap.AutoSize = true;
             this.cb_heap.Location = new System.Drawing.Point(345, 528);
-            this.cb_heap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_heap.Margin = new System.Windows.Forms.Padding(4);
             this.cb_heap.Name = "cb_heap";
             this.cb_heap.Size = new System.Drawing.Size(76, 20);
             this.cb_heap.TabIndex = 20;
             this.cb_heap.Text = "Disable";
             this.cb_heap.UseVisualStyleBackColor = true;
             // 
-            // chartsBtn
+            // check
             // 
-            this.chartsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.chartsBtn.Location = new System.Drawing.Point(424, 22);
-            this.chartsBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.chartsBtn.Name = "chartsBtn";
-            this.chartsBtn.Size = new System.Drawing.Size(170, 74);
-            this.chartsBtn.TabIndex = 4;
-            this.chartsBtn.Text = "Charts";
-            this.chartsBtn.UseVisualStyleBackColor = true;
-            this.chartsBtn.Click += new System.EventHandler(this.chartsBtn_Click);
+            this.check.AutoSize = true;
+            this.check.Location = new System.Drawing.Point(911, 88);
+            this.check.Name = "check";
+            this.check.Size = new System.Drawing.Size(44, 16);
+            this.check.TabIndex = 7;
+            this.check.Text = "label7";
             // 
             // Porovnání
             // 
@@ -625,7 +660,7 @@ namespace Dlouhodobka_Sorting_Algoritms
             this.Controls.Add(this.pb_quick);
             this.Controls.Add(this.pb_odd);
             this.Controls.Add(this.pb_bubble);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Porovnání";
             this.Text = "Disable";
             this.Load += new System.EventHandler(this.Porovnání_Load);
@@ -694,5 +729,8 @@ namespace Dlouhodobka_Sorting_Algoritms
         private System.Windows.Forms.CheckBox cb_bogo;
         private System.Windows.Forms.CheckBox cb_heap;
         private System.Windows.Forms.Button chartsBtn;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tb_repet;
+        private System.Windows.Forms.Label check;
     }
 }

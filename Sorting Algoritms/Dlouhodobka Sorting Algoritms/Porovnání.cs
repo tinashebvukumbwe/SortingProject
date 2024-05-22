@@ -119,65 +119,75 @@ namespace Dlouhodobka_Sorting_Algoritms
 
         private void btn_start_Click(object sender, EventArgs e)
         {
-            try
-            {
-                pocet = Convert.ToInt32(tb_pocet.Text);
-            }
-            catch
-            {
-                MessageBox.Show("Enter the number in the correct format", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
+            
             btn_start.Enabled = false;
             btn_start.BackColor = Color.LightGray;
 
-            pbBubble.Maximum = pocet - 1;
-            pbOdd.Maximum = (pocet * 2) - 1;
-            pbHeap.Maximum = pocet - 1;
-            pbQuick.Maximum = pocet + (pocet / 10);
-
-            GenPole();
-            BubbleSortAlgorithm(numbers);
-            porovnani = 0;
-            zapis = 0;
-
-            GenPole();
-            OddEvenSortAlgorithm(numbers);
-            porovnani = 0;
-            zapis = 0;
-
-            GenPole();
-            stopwatch = new Stopwatch();
-            stopwatch.Start();
-            Quick_Sort(numbers, 0, pocet - 1);
-            stopwatch.Stop();
-            if(!cbQuick.Checked)
+            int repet = Convert.ToInt32(tb_repet.Text);
+            for (int i = 0; i <= repet; i++)
             {
-                cas = stopwatch.Elapsed.TotalMilliseconds;
-                casy[2] = cas;
-                pbQuick.Value = pbQuick.Maximum;
-                lbQuickCas.Text = $"Time: {cas} ms";
-                lbQuickPorovnani.Text = $"Number of comparisons: {porovnani}";
-                lbQuickZapis.Text = $"Number of entries: {zapis}";
-            }
-            porovnani = 0;
-            zapis = 0;
+                check.Text = $"{i}";
+                Reset();
 
-            GenPole();
-            BogoSort(numbers);
-            porovnani = 0;
-            zapis = 0;
+                try
+                {
+                    pocet = Convert.ToInt32(tb_pocet.Text);
+                }
+                catch
+                {
+                    MessageBox.Show("Enter the number in the correct format", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-            GenPole();
-            HeapSort(numbers);
+                pbBubble.Maximum = pocet - 1;
+                pbOdd.Maximum = (pocet * 2) - 1;
+                pbHeap.Maximum = pocet - 1;
+                pbQuick.Maximum = pocet + (pocet / 10);
+
+                GenPole();
+                BubbleSortAlgorithm(numbers);
+                porovnani = 0;
+                zapis = 0;
+
+                GenPole();
+                OddEvenSortAlgorithm(numbers);
+                porovnani = 0;
+                zapis = 0;
+
+                GenPole();
+                stopwatch = new Stopwatch();
+                stopwatch.Start();
+                Quick_Sort(numbers, 0, pocet - 1);
+                stopwatch.Stop();
+                if (!cbQuick.Checked)
+                {
+                    cas = stopwatch.Elapsed.TotalMilliseconds;
+                    casy[2] = cas;
+                    pbQuick.Value = pbQuick.Maximum;
+                    lbQuickCas.Text = $"Time: {cas} ms";
+                    lbQuickPorovnani.Text = $"Number of comparisons: {porovnani}";
+                    lbQuickZapis.Text = $"Number of entries: {zapis}";
+                }
+                porovnani = 0;
+                zapis = 0;
+
+                GenPole();
+                BogoSort(numbers);
+                porovnani = 0;
+                zapis = 0;
+
+                GenPole();
+                HeapSort(numbers);
 
 
-            lbBubblePoradi.Text = "Order: " + NajdiPoradi(casy, 0);
-            lbOddPoradi.Text = "Order: " + NajdiPoradi(casy, 1);
-            lbQuickPoradi.Text = "Order: " + NajdiPoradi(casy, 2);
-            lbBogoPoradi.Text = "Order: " + NajdiPoradi(casy, 3);
-            lbHeapPoradi.Text = "Order: " + NajdiPoradi(casy, 4);
+                lbBubblePoradi.Text = "Order: " + NajdiPoradi(casy, 0);
+                lbOddPoradi.Text = "Order: " + NajdiPoradi(casy, 1);
+                lbQuickPoradi.Text = "Order: " + NajdiPoradi(casy, 2);
+                lbBogoPoradi.Text = "Order: " + NajdiPoradi(casy, 3);
+                lbHeapPoradi.Text = "Order: " + NajdiPoradi(casy, 4);
+
+                
+            }     
         }
 
         public void GenPole()
@@ -222,6 +232,7 @@ namespace Dlouhodobka_Sorting_Algoritms
             return 0;
         }
 
+        #region Sorts
         static void BubbleSortAlgorithm(int[] arr)
         {
             if (cbBubble.Checked)
@@ -490,7 +501,12 @@ namespace Dlouhodobka_Sorting_Algoritms
 
             porovnani++;
         }
-        private void btn_reset_Click(object sender, EventArgs e)
+        #endregion
+
+        #region Btns
+        private void btn_reset_Click(object sender, EventArgs e) => Reset();
+
+        void Reset()
         {
             pbBubble.Value = 0;
             pbOdd.Value = 0;
@@ -498,10 +514,8 @@ namespace Dlouhodobka_Sorting_Algoritms
             pbBogo.Value = 0;
             pbHeap.Value = 0;
 
-            for(int i = 0;i < 5;i++)
-            {
+            for (int i = 0; i < 5; i++)
                 casy[i] = 0;
-            }
 
             pocet = 0;
             zapis = 0;
@@ -545,11 +559,6 @@ namespace Dlouhodobka_Sorting_Algoritms
             chartsTab.Show();
             chartsTab.Activate();
         }
-
-        private void label26_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        #endregion
     }
 }
