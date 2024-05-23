@@ -30,6 +30,9 @@ namespace Dlouhodobka_Sorting_Algoritms
         static Label lbZapis;
         static Label lbPorovnani;
         static Stopwatch stopwatch;
+        static bool start = false;
+        static bool algChosen = false;
+        static bool close = false;
         #endregion
 
         public Vizualizace(int pPrvku, int dDelay, int alg, bool fast)
@@ -40,15 +43,22 @@ namespace Dlouhodobka_Sorting_Algoritms
             delay = dDelay;
             algoritmus = alg;
             fMode = fast;
-            
+
             SetStyle(ControlStyles.UserPaint, true);
             SetStyle(ControlStyles.AllPaintingInWmPaint, true);
             SetStyle(ControlStyles.DoubleBuffer, true);
-            
+
         }
 
         private void Vizualizace_Load(object sender, EventArgs e)
         {
+            resetForm();
+
+            start = false;
+            algChosen = false;
+            close = false;
+            okno = this;
+
             rectangles = new Rectangle[pocet];
             GenPole();
             //1030 -> 930 šířka jen,  50 margin
@@ -56,7 +66,7 @@ namespace Dlouhodobka_Sorting_Algoritms
             int startX = 50;
             int startY = 489 - 70;
             int width = (930) / pocet;
-            if(width < 1)
+            if (width < 1)
             {
                 width = 1;
                 okno.Width = pocet + 100;
@@ -100,7 +110,7 @@ namespace Dlouhodobka_Sorting_Algoritms
             }
         }
 
-        static void BubbleSortAlgorithm(int[] arr, int pocet)
+        void BubbleSortAlgorithm(int[] arr, int pocet)
         {
             int n = arr.Length;
             for (int i = 0; i < n - 1; i++)
@@ -109,33 +119,43 @@ namespace Dlouhodobka_Sorting_Algoritms
                 {
                     if (arr[j] > arr[j + 1])
                     {
-                        Swap(arr, j, j+1);                 
+                        Swap(arr, j, j + 1);
+                        if (close)
+                        {
+                            return;
+                        }
                     }
                     porovnani++;
 
                     if (!fMode)
                     {
+                        this.Invoke((MethodInvoker)delegate
+                        {
+                            lbPorovnani.Text = "Number of comparisons: " + porovnani;
+
+                            cas = stopwatch.Elapsed.TotalMilliseconds;
+                            lbCas.Text = "Elapsed time: " + cas + " ms";
+                        });
+                    }
+                }
+                if (fMode)
+                {
+                    this.Invoke((MethodInvoker)delegate
+                    {
+                        okno.Refresh();
                         lbPorovnani.Text = "Number of comparisons: " + porovnani;
 
                         cas = stopwatch.Elapsed.TotalMilliseconds;
                         lbCas.Text = "Elapsed time: " + cas + " ms";
-                    }
-                }
-                if(fMode)
-                {
-                    okno.Refresh();
-                    lbPorovnani.Text = "Number of comparisons: " + porovnani;
-
-                    cas = stopwatch.Elapsed.TotalMilliseconds;
-                    lbCas.Text = "Elapsed time: " + cas + " ms";
+                    });
                 }
             }
         }
 
 
-        
 
-        static void OddEvenSortAlgorithm(int[] arr, int pocet)
+
+        void OddEvenSortAlgorithm(int[] arr, int pocet)
         {
             int n = arr.Length;
             bool sorted = false; // Zjistí, zda je pole již seřazené
@@ -156,10 +176,13 @@ namespace Dlouhodobka_Sorting_Algoritms
 
                     if (!fMode)
                     {
-                        lbPorovnani.Text = "Number of comparisons: " + porovnani;
+                        this.Invoke((MethodInvoker)delegate
+                        {
+                            lbPorovnani.Text = "Number of comparisons: " + porovnani;
 
-                        cas = stopwatch.Elapsed.TotalMilliseconds;
-                        lbCas.Text = "Elapsed time: " + cas + " ms";
+                            cas = stopwatch.Elapsed.TotalMilliseconds;
+                            lbCas.Text = "Elapsed time: " + cas + " ms";
+                        });
                     }
                 }
 
@@ -174,25 +197,31 @@ namespace Dlouhodobka_Sorting_Algoritms
 
                     if (!fMode)
                     {
-                        lbPorovnani.Text = "Number of comparisons: " + porovnani;
+                        this.Invoke((MethodInvoker)delegate
+                        {
+                            lbPorovnani.Text = "Number of comparisons: " + porovnani;
 
-                        cas = stopwatch.Elapsed.TotalMilliseconds;
-                        lbCas.Text = "Elapsed time: " + cas + " ms";
+                            cas = stopwatch.Elapsed.TotalMilliseconds;
+                            lbCas.Text = "Elapsed time: " + cas + " ms";
+                        });
                     }
                 }
                 if (fMode)
                 {
-                    okno.Refresh();
-                    lbPorovnani.Text = "Number of comparisons: " + porovnani;
+                    this.Invoke((MethodInvoker)delegate
+                    {
+                        okno.Refresh();
+                        lbPorovnani.Text = "Number of comparisons: " + porovnani;
 
-                    cas = stopwatch.Elapsed.TotalMilliseconds;
-                    lbCas.Text = "Elapsed time: " + cas + " ms";
+                        cas = stopwatch.Elapsed.TotalMilliseconds;
+                        lbCas.Text = "Elapsed time: " + cas + " ms";
+                    });
                 }
             }
         }
 
 
-        private static void Quick_Sort(int[] arr, int left, int right)
+        private void Quick_Sort(int[] arr, int left, int right)
         {
             // Check if there are elements to sort
             if (left < right)
@@ -213,7 +242,7 @@ namespace Dlouhodobka_Sorting_Algoritms
         }
 
         // Method to partition the array
-        static int Partition(int[] arr, int left, int right)
+        int Partition(int[] arr, int left, int right)
         {
             // Select the pivot element
             int pivot = arr[left];
@@ -221,7 +250,11 @@ namespace Dlouhodobka_Sorting_Algoritms
             Color col = Color.Blue;
             if (fMode)
             {
-                okno.Refresh();
+                this.Invoke((MethodInvoker)delegate
+                {
+                    okno.Refresh();
+                });
+
             }
             // Continue until left and right pointers meet
             while (true)
@@ -261,11 +294,14 @@ namespace Dlouhodobka_Sorting_Algoritms
                     if (arr[left] == arr[right]) return right;
                     Swap(arr, left, right);
 
-                    porovnani++;
-                    lbPorovnani.Text = "Number of comparisons: " + porovnani;
+                    this.Invoke((MethodInvoker)delegate
+                    {
+                        lbPorovnani.Text = "Number of comparisons: " + porovnani;
 
-                    cas = stopwatch.Elapsed.TotalMilliseconds;
-                    lbCas.Text = "Elapsed time: " + cas + " ms";
+                        cas = stopwatch.Elapsed.TotalMilliseconds;
+                        lbCas.Text = "Elapsed time: " + cas + " ms";
+                    });
+                    porovnani++;
                 }
                 else
                 {
@@ -275,7 +311,7 @@ namespace Dlouhodobka_Sorting_Algoritms
             }
         }
 
-        static void BogoSort(int[] arr)
+        void BogoSort(int[] arr)
         {
             Random random = new Random();
 
@@ -285,16 +321,19 @@ namespace Dlouhodobka_Sorting_Algoritms
 
                 if (fMode)
                 {
-                    okno.Refresh();
-                    lbPorovnani.Text = "Number of comparisons: " + porovnani;
+                    this.Invoke((MethodInvoker)delegate
+                    {
+                        okno.Refresh();
+                        lbPorovnani.Text = "Number of comparisons: " + porovnani;
 
-                    cas = stopwatch.Elapsed.TotalMilliseconds;
-                    lbCas.Text = "Elapsed time: " + cas + " ms";
+                        cas = stopwatch.Elapsed.TotalMilliseconds;
+                        lbCas.Text = "Elapsed time: " + cas + " ms";
+                    });
                 }
             }
         }
 
-        static bool IsSorted(int[] arr)
+        bool IsSorted(int[] arr)
         {
             for (int i = 0; i < arr.Length - 1; i++)
             {
@@ -306,16 +345,19 @@ namespace Dlouhodobka_Sorting_Algoritms
                 porovnani++;
                 if (!fMode)
                 {
-                    lbPorovnani.Text = "Number of comparisons: " + porovnani;
+                    this.Invoke((MethodInvoker)delegate
+                    {
+                        lbPorovnani.Text = "Number of comparisons: " + porovnani;
 
-                    cas = stopwatch.Elapsed.TotalMilliseconds;
-                    lbCas.Text = "Elapsed time: " + cas + " ms";
+                        cas = stopwatch.Elapsed.TotalMilliseconds;
+                        lbCas.Text = "Elapsed time: " + cas + " ms";
+                    });
                 }
             }
             return true;
         }
 
-        static void Shuffle(int[] arr, Random random)
+        void Shuffle(int[] arr, Random random)
         {
             int n = arr.Length;
             while (n > 1)
@@ -337,11 +379,14 @@ namespace Dlouhodobka_Sorting_Algoritms
             {
                 Heapify(array, n, i);
 
-                okno.Refresh();
-                lbPorovnani.Text = "Number of comparisons: " + porovnani;
+                this.Invoke((MethodInvoker)delegate
+                {
+                    okno.Refresh();
+                    lbPorovnani.Text = "Number of comparisons: " + porovnani;
 
-                cas = stopwatch.Elapsed.TotalMilliseconds;
-                lbCas.Text = "Elapsed time: " + cas + " ms";
+                    cas = stopwatch.Elapsed.TotalMilliseconds;
+                    lbCas.Text = "Elapsed time: " + cas + " ms";
+                });
             }
 
             // One by one extract an element from heap
@@ -353,11 +398,14 @@ namespace Dlouhodobka_Sorting_Algoritms
                 // call max heapify on the reduced heap
                 Heapify(array, i, 0);
 
-                okno.Refresh();
-                lbPorovnani.Text = "Number of comparisons: " + porovnani;
+                this.Invoke((MethodInvoker)delegate
+                {
+                    okno.Refresh();
+                    lbPorovnani.Text = "Number of comparisons: " + porovnani;
 
-                cas = stopwatch.Elapsed.TotalMilliseconds;
-                lbCas.Text = "Elapsed time: " + cas + " ms";
+                    cas = stopwatch.Elapsed.TotalMilliseconds;
+                    lbCas.Text = "Elapsed time: " + cas + " ms";
+                });
             }
         }
 
@@ -391,15 +439,35 @@ namespace Dlouhodobka_Sorting_Algoritms
             porovnani++;
         }
 
-        private void btn_Ready_Click(object sender, EventArgs e)
+        private async void btn_Ready_Click(object sender, EventArgs e)
         {
+            start = !start;
+
+            if (!start)
+            {
+                btn_Ready.Text = "Start";
+                return;
+            }
+            else
+            {
+                btn_Ready.Text = "Stop";
+            }
+
+            if (algChosen)
+            {
+                return;
+            }
+
+            algChosen = true;
+
             switch (algoritmus)
             {
                 case 1:
                     stopwatch = new Stopwatch();
                     stopwatch.Start();
 
-                    BubbleSortAlgorithm(numbers, pocet);
+                    //BubbleSortAlgorithm(numbers, pocet);
+                    await Task.Run(() => BubbleSortAlgorithm(numbers, pocet));
 
                     stopwatch.Stop();
                     cas = stopwatch.Elapsed.TotalMilliseconds;
@@ -412,7 +480,8 @@ namespace Dlouhodobka_Sorting_Algoritms
                     stopwatch = new Stopwatch();
                     stopwatch.Start();
 
-                    OddEvenSortAlgorithm(numbers, pocet);
+                    //OddEvenSortAlgorithm(numbers, pocet);
+                    await Task.Run(() => OddEvenSortAlgorithm(numbers, pocet));
 
                     stopwatch.Stop();
                     cas = stopwatch.Elapsed.TotalMilliseconds;
@@ -425,7 +494,8 @@ namespace Dlouhodobka_Sorting_Algoritms
                     stopwatch = new Stopwatch();
                     stopwatch.Start();
 
-                    Quick_Sort(numbers, 0, pocet - 1);
+                    //Quick_Sort(numbers, 0, pocet - 1);
+                    await Task.Run(() => Quick_Sort(numbers, 0, pocet - 1));
 
                     stopwatch.Stop();
                     cas = stopwatch.Elapsed.TotalMilliseconds;
@@ -438,7 +508,8 @@ namespace Dlouhodobka_Sorting_Algoritms
                     stopwatch = new Stopwatch();
                     stopwatch.Start();
 
-                    BogoSort(numbers);
+                    //BogoSort(numbers);
+                    await Task.Run(() => BogoSort(numbers));
 
                     stopwatch.Stop();
                     cas = stopwatch.Elapsed.TotalMilliseconds;
@@ -451,7 +522,8 @@ namespace Dlouhodobka_Sorting_Algoritms
                     stopwatch = new Stopwatch();
                     stopwatch.Start();
 
-                    Sort(numbers);
+                    //Sort(numbers);
+                    await Task.Run(() => Sort(numbers));
 
                     stopwatch.Stop();
                     cas = stopwatch.Elapsed.TotalMilliseconds;
@@ -478,10 +550,16 @@ namespace Dlouhodobka_Sorting_Algoritms
                     // Příkazy, které se provedou, pokud žádný case neodpovídá výrazu
                     break;
             }
+            if (close)
+            {
+                okno.Dispose();
+            }
         }
 
+
+
         // Metoda pro prohození prvků v poli
-        static void Swap(int[] array, int i, int j)
+        void Swap(int[] array, int i, int j)
         {
             int temp = array[i];
             array[i] = array[j];
@@ -505,16 +583,30 @@ namespace Dlouhodobka_Sorting_Algoritms
             rectangles[j].Y = (489 - 70) - Map(array[j], pocet, 360);
             rectangles[j].Height = Map(array[j], pocet, 360);
 
+            while (!start)
+            {
+                if (close)
+                {
+                    return;
+                }
+            }
+
             if (!fMode)
             {
-                // Přidání zpoždění (např. 100 ms)
-                Thread.Sleep(delay);
+                this.Invoke((MethodInvoker)delegate
+                {
+                    // Přidání zpoždění (např. 100 ms)
+                    Thread.Sleep(delay);
 
-                // Aktualizace okna po každém kroku
-                okno.Refresh();
+                    // Aktualizace okna po každém kroku
+                    okno.Refresh();
+                });
             }
             zapisy++;
-            lbZapis.Text = "Number of entries: " + zapisy;
+            this.Invoke((MethodInvoker)delegate
+            {
+                lbZapis.Text = "Number of entries: " + zapisy;
+            });
         }
 
         public void GenPole()
@@ -549,8 +641,12 @@ namespace Dlouhodobka_Sorting_Algoritms
             return mappedValue;
         }
 
-        public static void Kontrola(int []arr, int pocet)
+        public static void Kontrola(int[] arr, int pocet)
         {
+            if (close)
+            {
+                return;
+            }
             int n = arr.Length;
 
             Color barva = Color.Green;
@@ -580,6 +676,21 @@ namespace Dlouhodobka_Sorting_Algoritms
             {
                 g.DrawRectangle(pen, rect);
             }
+        }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            close = true;
+        }
+
+        void resetForm()
+        {
+            rectangles = null;
+            okno = null;
+            numbers = null;
+            start = false;
+            algChosen = false;
+            close = false;
         }
     }
 }
