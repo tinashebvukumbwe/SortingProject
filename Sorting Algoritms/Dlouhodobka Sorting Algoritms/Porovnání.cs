@@ -225,7 +225,7 @@ namespace Dlouhodobka_Sorting_Algoritms
                 }
                 ChartLoad();
                 if (i == 1)
-                    chartsTab.DisableCharts(cbBubble.Checked, cbOdd.Checked, cbQuick.Checked, cbBogo.Checked, cbHeap.Checked);
+                    chartsTab.DisableCharts(cbBubble.Checked, cbOdd.Checked, cbQuick.Checked, cbBogo.Checked, cbHeap.Checked);              
 
                 chartsTab.UpdateCharts();
             }

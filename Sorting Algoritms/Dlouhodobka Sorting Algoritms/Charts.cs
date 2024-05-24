@@ -54,8 +54,8 @@ namespace Dlouhodobka_Sorting_Algoritms
         }
 
         #region Loads
-        private void Charts_Load(object sender, EventArgs e)
-        {
+        public void Charts_Load(object sender, EventArgs e)
+        {  
             BubbleChart(element, bubTime, true);
             OddChart(element, oddTime, true);
             QuickChart(element, quiTime, true);
@@ -76,21 +76,40 @@ namespace Dlouhodobka_Sorting_Algoritms
 
         public void DisableCharts(bool bub, bool odd, bool qui, bool bog, bool hea)
         {
+            this.Width = 1820;
+
             bubSort = !bub;
             oddSort = !odd;
             quiSort = !qui;
             bogSort = !bog;
             heaSort = !hea;
 
-            chart1.Visible = bubSort;
-            chart2.Visible = oddSort;
-            chart3.Visible = quiSort;
-            chart4.Visible = bogSort;
-            chart5.Visible = heaSort;
-
-            UpdateAllCharts();
+            if (!bubSort)
+            {
+                chart1.Visible = bubSort;
+                this.Width -= 300;
+            }
+            if (!oddSort)
+            {
+                chart2.Visible = oddSort;
+                this.Width -= 300;
+            }
+            if (!quiSort)
+            {
+                chart3.Visible = quiSort;
+                this.Width -= 300;
+            }
+            if (!bogSort)
+            {
+                chart4.Visible = bogSort;
+                this.Width -= 300;
+            }
+            if (!heaSort)
+            {
+                chart5.Visible = heaSort;
+                this.Width -= 300;
+            } 
         }
-
 
         #endregion
 
